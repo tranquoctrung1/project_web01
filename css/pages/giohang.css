@@ -1,0 +1,201 @@
+@media screen and (max-width: 425px){
+    .content-main-mobile{
+        display: grid;
+        grid-template-areas: "noiDungDonHang"
+                             "noiDungThanhToan";
+        grid-template-columns: 100%;
+        justify-content: center;
+        margin: 4% 12%;
+    }
+
+    .noi-dung-don-hang thead{
+        display: none; 
+    }
+    
+    .noi-dung-thanh-toan-mobile{
+        grid-area: noiDungThanhToan;
+        margin-top: 40px;
+    }
+
+    .noi-dung-don-hang .table tr{
+        /* margin: 0 0 15px; */
+        display: block;
+        background-color: #fdfdfd;
+    }
+
+    .noi-dung-don-hang .table td{
+        display: block;
+        text-align: right;
+        /* padding: 10px 20px 10px 160px; */
+        position: relative;
+        border: none;        
+    }
+
+    .noi-dung-don-hang .table td:nth-of-type(1){
+        padding-bottom: 0px;
+    }
+
+    .noi-dung-don-hang .table td:nth-of-type(2){
+        padding-top: 0px;
+        text-align: center;
+    }
+
+    .noi-dung-don-hang .table td:nth-of-type(5){
+        padding-right: 10%;
+    }
+
+    .noi-dung-don-hang .table td:before{
+        content: '';
+        font-weight: bold;
+        color: #495057;
+        position: absolute;
+        top: 50%;
+        /* left: 20px; */
+        left: 0px;
+        transform: translateY(-50%);
+    }
+  
+    .noi-dung-don-hang .table td:nth-of-type(1):before{
+        content: '';
+
+        }
+
+    .noi-dung-don-hang .table td:nth-of-type(2):before{
+        content: '';
+        }
+
+    .noi-dung-don-hang .table td:nth-of-type(3):before{
+        content: 'Sản phẩm';
+
+        }
+    .noi-dung-don-hang .table td:nth-of-type(4):before{
+        content: 'Giá tiền';
+
+        }
+    .noi-dung-don-hang .table td:nth-of-type(5):before{
+        content: 'Số lượng';
+
+        }
+    .noi-dung-don-hang .table td:nth-of-type(6):before{
+        content: 'Thành tiền';
+
+        }
+
+    .noi-dung-thanh-toan .table th{
+        border: none;   
+        background-color: #fdfdfd;   
+        text-align: left;
+        }
+    
+    .noi-dung-thanh-toan .table td{
+        border: none;    
+        text-align: right;
+        }
+    }
+    
+    /* ------------------------------------------------ */
+    .a-btn{
+        background: #f39c12;
+            padding: 3px 8px;
+            border-radius: 5px;
+            color: white;
+            text-decoration: none;
+            transition: .5s all ease-in-out; 
+    }
+    
+    .a-btn:hover{
+        background: #ffad60;
+        color: #d9534f; 
+    }
+    
+    .a-btn .noi-dung{
+        font-weight: 600px;
+        color: white;
+    }
+    
+    @media screen and (min-width: 426px){
+        .content-main{
+            display: grid;
+            grid-template-areas: "noiDungDonHang noiDungDonHang"
+                                 ". noiDungThanhToan";
+            grid-template-columns: 50% 50%;
+            justify-content: center;
+            margin: 4% 12%;
+        }
+
+        .noi-dung-thanh-toan{
+            grid-area: noiDungThanhToan;
+            background-color: #d6d8db;
+            padding: 5%;
+        }
+
+        
+    }
+
+    .tieu-de-thanh-toan{
+        color: #495051;
+        text-align: -webkit-left;
+        font-weight: bolder;
+        font-size: x-large;
+    }
+    
+    .noi-dung-don-hang{
+        grid-area: noiDungDonHang;
+        margin-bottom: inherit;      
+    }
+    
+   .icon-xoa{
+        
+    }
+    
+     .img-san-pham{
+        width: 48px;
+        height: 48px;
+    }
+    
+    .tieu-de-don-hang
+    {
+        color: #495051;
+        text-align: -webkit-center;
+        font-weight: bolder;
+        font-size: x-large;
+    }
+    
+    .ten-san-pham{
+        font-weight: 600px;
+        color: #f39c12;
+    }
+    
+    .gia-san-pham{
+        font-weight: 600px;
+    }
+    
+    .text-so-luong{
+        height: 30px;
+        width: 30px;
+        text-align: center;
+        border: none;
+    }
+    
+    td{
+        background-color: #fdfdfd;
+    }
+    
+   .noi-chua-btn-cap-nhat{
+        display: flex;
+        justify-content: flex-end;
+    
+    }
+    
+    .gia{
+        font-weight: 600px;
+    } 
+     
+   .noi-chua-btn-thanh-toan{
+        text-align: center;
+        display: grid;
+    }
+ 
+   
+
+ 

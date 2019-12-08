@@ -1,0 +1,55 @@
+/* Định nghĩa css trong file header.php */
+
+header .navbar .navbar-brand .logo {
+  width: 50px;
+  height: 50px; }
+
+header .navbar .navbar-brand .content {
+  font-weight: bold;
+  letter-spacing: 2px; }
+
+header .navbar ul.navbar-nav li.nav-item a.nav-link {
+  font-weight: 500;
+  font-size: 15px;
+  transition: .3s all ease-in-out; }
+
+header .navbar ul.navbar-nav li.nav-item .dropdown-menu {
+  transition: .3s all ease-in-out; }
+  header .navbar ul.navbar-nav li.nav-item .dropdown-menu .dropdown-item {
+    transition: .3s all ease-in-out;
+    font-size: 13px;
+    text-align: center; }
+
+header .navbar ul.navbar-nav li.nav-item:hover a.nav-link {
+  color: #f39c12; }
+
+header .navbar ul.navbar-nav li.nav-item:hover .dropdown-menu {
+  display: block;
+  animation: xuathien .5s linear; }
+  header .navbar ul.navbar-nav li.nav-item:hover .dropdown-menu .dropdown-item:hover {
+    color: #f39c12; }
+
+header .navbar ul.navbar-nav li.nav-item.cart .fa-shopping-cart {
+  position: relative; }
+  header .navbar ul.navbar-nav li.nav-item.cart .fa-shopping-cart::after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 7px;
+    height: 7px;
+    background: #f39c12;
+    top: -38%;
+    left: 38%;
+    border-radius: 50%; }
+
+@media only screen and (min-width: 1023px) {
+  header .navbar ul.navbar-nav li.nav-item .dropdown-menu .dropdown-item {
+    text-align: left; }
+  header .navbar ul.navbar-nav li.nav-item:nth-child(4) {
+    margin-right: 2rem; } }
+
+@keyframes xuathien {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }

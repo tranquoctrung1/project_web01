@@ -1,0 +1,231 @@
+.thanh-tim-kiem-nang-cao .container .row .col .tim-kiem-nang-cao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thanh-tim-kiem-nang-cao .container .row .col .tim-kiem-nang-cao .thanh-chua-nang-cao {
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+.thanh-tim-kiem-nang-cao .container .row .col .tim-kiem-nang-cao .thanh-chua-nang-cao .thanh-1,
+.thanh-tim-kiem-nang-cao .container .row .col .tim-kiem-nang-cao .thanh-chua-nang-cao .thanh-2,
+.thanh-tim-kiem-nang-cao .container .row .col .tim-kiem-nang-cao .thanh-chua-nang-cao .thanh-3 {
+  width: 30px;
+  height: 5px;
+  background-color: #333;
+  margin: 3px 0;
+  transition: .5s all ease-in-out;
+}
+
+.thanh-tim-kiem-nang-cao .container .row .col .tim-kiem-nang-cao .thanh-chua-nang-cao.thay-doi .thanh-1 {
+  transform: rotate(-45deg) translate(-5px, 11px);
+}
+
+.thanh-tim-kiem-nang-cao .container .row .col .tim-kiem-nang-cao .thanh-chua-nang-cao.thay-doi .thanh-2 {
+  opacity: 0;
+}
+
+.thanh-tim-kiem-nang-cao .container .row .col .tim-kiem-nang-cao .thanh-chua-nang-cao.thay-doi .thanh-3 {
+  transform: rotate(45deg) translate(0px, -7px);
+}
+
+.thanh-tim-kiem-nang-cao .container .row .col .nhap-tim-kiem-nang-cao {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thanh-tim-kiem-nang-cao .container .row .col .nhap-tim-kiem-nang-cao form {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+
+@media screen and (min-width: 769px) {
+  .thanh-tim-kiem-nang-cao .container .row .col .nhap-tim-kiem-nang-cao form {
+    width: 50%;
+  }
+}
+
+.thanh-tim-kiem-nang-cao .container .row .col .nhap-tim-kiem-nang-cao form label {
+  font-weight: 500;
+}
+
+.thanh-tim-kiem-nang-cao .container .row .col .nhap-tim-kiem-nang-cao form .gui-thong-tin {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.thanh-tim-kiem-nang-cao .container .row .col .nhap-tim-kiem-nang-cao form .gui-thong-tin button {
+  margin-right: 5px;
+  border: none;
+  outline: none;
+  background: orange;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+  transition: .5s all ease-in-out;
+}
+
+.thanh-tim-kiem-nang-cao .container .row .col .nhap-tim-kiem-nang-cao form .gui-thong-tin button:hover {
+  background: #f6e58d;
+  color: #d9534f;
+}
+
+.san-pham-tim-kiem-nang-cao {
+  position: relative;
+}
+
+.san-pham-tim-kiem-nang-cao .hinh-nen-1,
+.san-pham-tim-kiem-nang-cao .hinh-nen-2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.san-pham-tim-kiem-nang-cao .hinh-nen-1 {
+  z-index: -1;
+  background: #f6e58d;
+  clip-path: polygon(72% 74%, 100% 27%, 100% 100%, 5% 100%);
+}
+
+.san-pham-tim-kiem-nang-cao .hinh-nen-2 {
+  z-index: -2;
+  background: #f9ca24;
+  clip-path: polygon(63% 69%, 100% 9%, 100% 100%, 5% 100%);
+}
+
+.san-pham-tim-kiem-nang-cao .container .row .col h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  position: relative;
+  padding: 0 20px;
+}
+
+@media screen and (min-width: 767px) {
+  .san-pham-tim-kiem-nang-cao .container .row .col h2 {
+    font-size: 1.6em;
+  }
+}
+
+.san-pham-tim-kiem-nang-cao .container .row .col h2::before {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  top: 50%;
+  left: 0;
+  background: #bdc3c7;
+  z-index: -1;
+}
+
+.san-pham-tim-kiem-nang-cao .container .row .col h2 span {
+  padding: 5px 10px;
+  background: white;
+}
+
+.san-pham-tim-kiem-nang-cao .container .row.vi-tri {
+  position: relative;
+}
+
+.san-pham-tim-kiem-nang-cao .container .row.vi-tri .item {
+  padding: 10px;
+}
+
+.san-pham-tim-kiem-nang-cao .container .row.vi-tri .item figure {
+  padding: 10px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+.san-pham-tim-kiem-nang-cao .container .row.vi-tri .item figure .img-box {
+  transition: .5s all ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.san-pham-tim-kiem-nang-cao .container .row.vi-tri .item figure .img-box img {
+  width: 100%;
+}
+
+.san-pham-tim-kiem-nang-cao .container .row.vi-tri .item figure .img-box .fas {
+  position: absolute;
+  top: 50%;
+  padding: 10px;
+  transition: .5s all ease-in-out;
+  border-radius: 5px;
+  color: white;
+  background: orange;
+}
+
+.san-pham-tim-kiem-nang-cao .container .row.vi-tri .item figure .img-box .fas.fa-shopping-cart {
+  left: 40%;
+  transform: translateX(-20%) translateY(-700%);
+}
+
+.san-pham-tim-kiem-nang-cao .container .row.vi-tri .item figure .img-box .fas.fa-eye {
+  left: 60%;
+  transform: translateX(-20%) translateY(700%);
+}
+
+.san-pham-tim-kiem-nang-cao .container .row.vi-tri .item figure .img-box:hover {
+  filter: opacity(0.8);
+}
+
+.san-pham-tim-kiem-nang-cao .container .row.vi-tri .item figure .img-box:hover .fas.fa-shopping-cart,
+.san-pham-tim-kiem-nang-cao .container .row.vi-tri .item figure .img-box:hover .fas.fa-eye {
+  transform: translateX(-20%) translateY(0%);
+  transition: .5s all ease-in-out;
+}
+
+.san-pham-tim-kiem-nang-cao .container .row.vi-tri .item figure .img-box:hover .fas.fa-shopping-cart:hover,
+.san-pham-tim-kiem-nang-cao .container .row.vi-tri .item figure .img-box:hover .fas.fa-eye:hover {
+  background: #ffad60;
+  color: #d9534f;
+}
+
+.san-pham-tim-kiem-nang-cao .container .row.vi-tri .item figure figcaption h4 {
+  font-weight: bold;
+}
+
+.san-pham-tim-kiem-nang-cao .container .row.vi-tri .item figure figcaption .gia-luoc-xem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5px;
+}
+
+.san-pham-tim-kiem-nang-cao .container .row.vi-tri .item figure figcaption .gia-luoc-xem .gia {
+  font-weight: 600;
+}
+
+.san-pham-tim-kiem-nang-cao .container .row.vi-tri .item figure figcaption .gia-luoc-xem .luoc-xem {
+  color: #636e72;
+}
+
+.san-pham-tim-kiem-nang-cao .container .row.vi-tri .item figure figcaption .chi-tiet {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.san-pham-tim-kiem-nang-cao .container .row.vi-tri .item figure figcaption .chi-tiet a {
+  background: orange;
+  padding: 3px 8px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+  transition: .5s all ease-in-out;
+}
+
+.san-pham-tim-kiem-nang-cao .container .row.vi-tri .item figure figcaption .chi-tiet a:hover {
+  background: #ffad60;
+  color: #d9534f;
+}

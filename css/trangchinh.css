@@ -1,0 +1,15 @@
+/* hút file css trong common thư mục */
+@import "./common/header.css";
+@import "./common/footer.css";
+@import "./common/master.css";
+
+/* hút các file css trong thư mục page */
+
+@import "./pages/trangchu.css";
+@import "./pages/dangnhap.css";
+@import "./pages/dangky.css";
+@import "./pages/timkiemcoban.css";
+@import "./pages/timkiemnangcao.css";
+@import "./pages/loaisanpham.css";
+@import "./pages/hangsanxuat.css";
+@import "./pages/giohang.css";
