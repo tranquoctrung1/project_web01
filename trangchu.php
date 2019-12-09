@@ -1,7 +1,10 @@
-<?php   
-    $tieude = 'Trang Chủ';
-    $class = 'index-page';
-    $noidungtrang = "<section class='khoi-bang-hieu mb-4'>
+<?php
+// include các trang cần thiết cho trang chủ
+include('./component/SanPhamMoi.php');
+include('./component/SanPhanBanChay.php');
+$tieude = 'Trang Chủ';
+$class = 'index-page';
+$noidungtrang = "<section class='khoi-bang-hieu mb-4'>
     <div class='bang-hieu'>
       <div class='owl-carousel owl-theme'>
         <div class='item'><img src='./images/home_banner_1.jpg' alt='' srcset=''></div>
@@ -20,113 +23,14 @@
       </div>
       <div class='row vi-tri'>
         <div class='col'>
-          <div class='owl-carousel owl-theme'>
-            <div class='item'>
-              <figure>
-                <div class='img-box'><img src='./images/ao.png' alt='' srcset=''><a href='#'><i class='fas fa-shopping-cart'></i></a><a href='#'><i class='fas fa-eye'></i></a></div>
-                <figcaption>
-                  <h4 class='text-center ten-san-pham'>Áo Khoác</h4>
-                  <div class='gia-luoc-xem'><span class='gia'>180,000 <sup>đ</sup></span><span class='luoc-xem'>2 lượt xem</span></div>
-                  <div class='chi-tiet mt-2'><a href='#'>Chi tiết</a><a href='#'>Thêm giỏ hàng</a></div>
-                </figcaption>
-              </figure>
-            </div>
-            <div class='item'>
-              <figure>
-                <div class='img-box'><img src='./images/ao.png' alt='' srcset=''><a href='#'><i class='fas fa-shopping-cart'></i></a><a href='#'><i class='fas fa-eye'></i></a></div>
-                <figcaption>
-                  <h4 class='text-center ten-san-pham'>Áo Khoác</h4>
-                  <div class='gia-luoc-xem'><span class='gia'>180,000 <sup>đ</sup></span><span class='luoc-xem'>2 lượt xem</span></div>
-                  <div class='chi-tiet mt-2'><a href='#'>Chi tiết</a><a href='#'>Thêm giỏ hàng</a></div>
-                </figcaption>
-              </figure>
-            </div>
-            <div class='item'>
-              <figure>
-                <div class='img-box'><img src='./images/ao.png' alt='' srcset=''><a href='#'><i class='fas fa-shopping-cart'></i></a><a href='#'><i class='fas fa-eye'></i></a></div>
-                <figcaption>
-                  <h4 class='text-center ten-san-pham'>Áo Khoác</h4>
-                  <div class='gia-luoc-xem'><span class='gia'>180,000 <sup>đ</sup></span><span class='luoc-xem'>2 lượt xem</span></div>
-                  <div class='chi-tiet mt-2'><a href='#'>Chi tiết</a><a href='#'>Thêm giỏ hàng</a></div>
-                </figcaption>
-              </figure>
-            </div>
-            <div class='item'>
-              <figure>
-                <div class='img-box'><img src='./images/ao.png' alt='' srcset=''><a href='#'><i class='fas fa-shopping-cart'></i></a><a href='#'><i class='fas fa-eye'></i></a></div>
-                <figcaption>
-                  <h4 class='text-center ten-san-pham'>Áo Khoác</h4>
-                  <div class='gia-luoc-xem'><span class='gia'>180,000 <sup>đ</sup></span><span class='luoc-xem'>2 lượt xem</span></div>
-                  <div class='chi-tiet mt-2'><a href='#'>Chi tiết</a><a href='#'>Thêm giỏ hàng</a></div>
-                </figcaption>
-              </figure>
-            </div>
-            <div class='item'>
-              <figure>
-                <div class='img-box'><img src='./images/ao.png' alt='' srcset=''><a href='#'><i class='fas fa-shopping-cart'></i></a><a href='#'><i class='fas fa-eye'></i></a></div>
-                <figcaption>
-                  <h4 class='text-center ten-san-pham'>Áo Khoác</h4>
-                  <div class='gia-luoc-xem'><span class='gia'>180,000 <sup>đ</sup></span><span class='luoc-xem'>2 lượt xem</span></div>
-                  <div class='chi-tiet mt-2'><a href='#'>Chi tiết</a><a href='#'>Thêm giỏ hàng</a></div>
-                </figcaption>
-              </figure>
-            </div>
-            <div class='item'>
-              <figure>
-                <div class='img-box'><img src='./images/ao.png' alt='' srcset=''><a href='#'><i class='fas fa-shopping-cart'></i></a><a href='#'><i class='fas fa-eye'></i></a></div>
-                <figcaption>
-                  <h4 class='text-center ten-san-pham'>Áo Khoác</h4>
-                  <div class='gia-luoc-xem'><span class='gia'>180,000 <sup>đ</sup></span><span class='luoc-xem'>2 lượt xem</span></div>
-                  <div class='chi-tiet mt-2'><a href='#'>Chi tiết</a><a href='#'>Thêm giỏ hàng</a></div>
-                </figcaption>
-              </figure>
-            </div>
-            <div class='item'>
-              <figure>
-                <div class='img-box'><img src='./images/ao.png' alt='' srcset=''><a href='#'><i class='fas fa-shopping-cart'></i></a><a href='#'><i class='fas fa-eye'></i></a></div>
-                <figcaption>
-                  <h4 class='text-center ten-san-pham'>Áo Khoác</h4>
-                  <div class='gia-luoc-xem'><span class='gia'>180,000 <sup>đ</sup></span><span class='luoc-xem'>2 lượt xem</span></div>
-                  <div class='chi-tiet mt-2'><a href='#'>Chi tiết</a><a href='#'>Thêm giỏ hàng</a></div>
-                </figcaption>
-              </figure>
-            </div>
-            <div class='item'>
-              <figure>
-                <div class='img-box'><img src='./images/ao.png' alt='' srcset=''><a href='#'><i class='fas fa-shopping-cart'></i></a><a href='#'><i class='fas fa-eye'></i></a></div>
-                <figcaption>
-                  <h4 class='text-center ten-san-pham'>Áo Khoác</h4>
-                  <div class='gia-luoc-xem'><span class='gia'>180,000 <sup>đ</sup></span><span class='luoc-xem'>2 lượt xem</span></div>
-                  <div class='chi-tiet mt-2'><a href='#'>Chi tiết</a><a href='#'>Thêm giỏ hàng</a></div>
-                </figcaption>
-              </figure>
-            </div>
-            <div class='item'>
-              <figure>
-                <div class='img-box'><img src='./images/ao.png' alt='' srcset=''><a href='#'><i class='fas fa-shopping-cart'></i></a><a href='#'><i class='fas fa-eye'></i></a></div>
-                <figcaption>
-                  <h4 class='text-center ten-san-pham'>Áo Khoác</h4>
-                  <div class='gia-luoc-xem'><span class='gia'>180,000 <sup>đ</sup></span><span class='luoc-xem'>2 lượt xem</span></div>
-                  <div class='chi-tiet mt-2'><a href='#'>Chi tiết</a><a href='#'>Thêm giỏ hàng</a></div>
-                </figcaption>
-              </figure>
-            </div>
-            <div class='item'>
-              <figure>
-                <div class='img-box'><img src='./images/ao.png' alt='' srcset=''><a href='#'><i class='fas fa-shopping-cart'></i></a><a href='#'><i class='fas fa-eye'></i></a></div>
-                <figcaption>
-                  <h4 class='text-center ten-san-pham'>Áo Khoác</h4>
-                  <div class='gia-luoc-xem'><span class='gia'>180,000 <sup>đ</sup></span><span class='luoc-xem'>2 lượt xem</span></div>
-                  <div class='chi-tiet mt-2'><a href='#'>Chi tiết</a><a href='#'>Thêm giỏ hàng</a></div>
-                </figcaption>
-              </figure>
-            </div>
+          <div class='owl-carousel owl-theme' id='sanPhamMoiNhat'>
+            $sanPhamMoiNhat
           </div>
         </div>
       </div>
     </div>
   </section>
-  <section class='san-pham-chay-nhat mb-2'>
+  <section class='san-pham-chay-nhat'>
     <div class='hinh-nen-1'></div>
     <div class='hinh-nen-2'></div>
     <div class='container'>
@@ -138,113 +42,13 @@
       <div class='row vi-tri'>
         <div class='col'>
           <div class='owl-carousel owl-theme'>
-            <div class='item'>
-              <figure>
-                <div class='img-box'><img src='./images/ao.png' alt='' srcset=''><a href='#'><i class='fas fa-shopping-cart'></i></a><a href='#'><i class='fas fa-eye'></i></a></div>
-                <figcaption>
-                  <h4 class='text-center ten-san-pham'>Áo Khoác</h4>
-                  <div class='gia-luoc-xem'><span class='gia'>180,000 <sup>đ</sup></span><span class='luoc-xem'>2 lượt xem</span></div>
-                  <div class='chi-tiet mt-2'><a href='#'>Chi tiết</a><a href='#'>Thêm giỏ hàng</a></div>
-                </figcaption>
-              </figure>
-            </div>
-            <div class='item'>
-              <figure>
-                <div class='img-box'><img src='./images/ao.png' alt='' srcset=''><a href='#'><i class='fas fa-shopping-cart'></i></a><a href='#'><i class='fas fa-eye'></i></a></div>
-                <figcaption>
-                  <h4 class='text-center ten-san-pham'>Áo Khoác</h4>
-                  <div class='gia-luoc-xem'><span class='gia'>180,000 <sup>đ</sup></span><span class='luoc-xem'>2 lượt xem</span></div>
-                  <div class='chi-tiet mt-2'><a href='#'>Chi tiết</a><a href='#'>Thêm giỏ hàng</a></div>
-                </figcaption>
-              </figure>
-            </div>
-            <div class='item'>
-              <figure>
-                <div class='img-box'><img src='./images/ao.png' alt='' srcset=''><a href='#'><i class='fas fa-shopping-cart'></i></a><a href='#'><i class='fas fa-eye'></i></a></div>
-                <figcaption>
-                  <h4 class='text-center ten-san-pham'>Áo Khoác</h4>
-                  <div class='gia-luoc-xem'><span class='gia'>180,000 <sup>đ</sup></span><span class='luoc-xem'>2 lượt xem</span></div>
-                  <div class='chi-tiet mt-2'><a href='#'>Chi tiết</a><a href='#'>Thêm giỏ hàng</a></div>
-                </figcaption>
-              </figure>
-            </div>
-            <div class='item'>
-              <figure>
-                <div class='img-box'><img src='./images/ao.png' alt='' srcset=''><a href='#'><i class='fas fa-shopping-cart'></i></a><a href='#'><i class='fas fa-eye'></i></a></div>
-                <figcaption>
-                  <h4 class='text-center ten-san-pham'>Áo Khoác</h4>
-                  <div class='gia-luoc-xem'><span class='gia'>180,000 <sup>đ</sup></span><span class='luoc-xem'>2 lượt xem</span></div>
-                  <div class='chi-tiet mt-2'><a href='#'>Chi tiết</a><a href='#'>Thêm giỏ hàng</a></div>
-                </figcaption>
-              </figure>
-            </div>
-            <div class='item'>
-              <figure>
-                <div class='img-box'><img src='./images/ao.png' alt='' srcset=''><a href='#'><i class='fas fa-shopping-cart'></i></a><a href='#'><i class='fas fa-eye'></i></a></div>
-                <figcaption>
-                  <h4 class='text-center ten-san-pham'>Áo Khoác</h4>
-                  <div class='gia-luoc-xem'><span class='gia'>180,000 <sup>đ</sup></span><span class='luoc-xem'>2 lượt xem</span></div>
-                  <div class='chi-tiet mt-2'><a href='#'>Chi tiết</a><a href='#'>Thêm giỏ hàng</a></div>
-                </figcaption>
-              </figure>
-            </div>
-            <div class='item'>
-              <figure>
-                <div class='img-box'><img src='./images/ao.png' alt='' srcset=''><a href='#'><i class='fas fa-shopping-cart'></i></a><a href='#'><i class='fas fa-eye'></i></a></div>
-                <figcaption>
-                  <h4 class='text-center ten-san-pham'>Áo Khoác</h4>
-                  <div class='gia-luoc-xem'><span class='gia'>180,000 <sup>đ</sup></span><span class='luoc-xem'>2 lượt xem</span></div>
-                  <div class='chi-tiet mt-2'><a href='#'>Chi tiết</a><a href='#'>Thêm giỏ hàng</a></div>
-                </figcaption>
-              </figure>
-            </div>
-            <div class='item'>
-              <figure>
-                <div class='img-box'><img src='./images/ao.png' alt='' srcset=''><a href='#'><i class='fas fa-shopping-cart'></i></a><a href='#'><i class='fas fa-eye'></i></a></div>
-                <figcaption>
-                  <h4 class='text-center ten-san-pham'>Áo Khoác</h4>
-                  <div class='gia-luoc-xem'><span class='gia'>180,000 <sup>đ</sup></span><span class='luoc-xem'>2 lượt xem</span></div>
-                  <div class='chi-tiet mt-2'><a href='#'>Chi tiết</a><a href='#'>Thêm giỏ hàng</a></div>
-                </figcaption>
-              </figure>
-            </div>
-            <div class='item'>
-              <figure>
-                <div class='img-box'><img src='./images/ao.png' alt='' srcset=''><a href='#'><i class='fas fa-shopping-cart'></i></a><a href='#'><i class='fas fa-eye'></i></a></div>
-                <figcaption>
-                  <h4 class='text-center ten-san-pham'>Áo Khoác</h4>
-                  <div class='gia-luoc-xem'><span class='gia'>180,000 <sup>đ</sup></span><span class='luoc-xem'>2 lượt xem</span></div>
-                  <div class='chi-tiet mt-2'><a href='#'>Chi tiết</a><a href='#'>Thêm giỏ hàng</a></div>
-                </figcaption>
-              </figure>
-            </div>
-            <div class='item'>
-              <figure>
-                <div class='img-box'><img src='./images/ao.png' alt='' srcset=''><a href='#'><i class='fas fa-shopping-cart'></i></a><a href='#'><i class='fas fa-eye'></i></a></div>
-                <figcaption>
-                  <h4 class='text-center ten-san-pham'>Áo Khoác</h4>
-                  <div class='gia-luoc-xem'><span class='gia'>180,000 <sup>đ</sup></span><span class='luoc-xem'>2 lượt xem</span></div>
-                  <div class='chi-tiet mt-2'><a href='#'>Chi tiết</a><a href='#'>Thêm giỏ hàng</a></div>
-                </figcaption>
-              </figure>
-            </div>
-            <div class='item'>
-              <figure>
-                <div class='img-box'><img src='./images/ao.png' alt='' srcset=''><a href='#'><i class='fas fa-shopping-cart'></i></a><a href='#'><i class='fas fa-eye'></i></a></div>
-                <figcaption>
-                  <h4 class='text-center ten-san-pham'>Áo Khoác</h4>
-                  <div class='gia-luoc-xem'><span class='gia'>180,000 <sup>đ</sup></span><span class='luoc-xem'>2 lượt xem</span></div>
-                  <div class='chi-tiet mt-2'><a href='#'>Chi tiết</a><a href='#'>Thêm giỏ hàng</a></div>
-                </figcaption>
-              </figure>
-            </div>
+            $sanPhamBanChay
           </div>
         </div>
       </div>
     </div>
   </section>";
-    include('./layout/master.php');
+include('./layout/master.php');
 ?>
 <!-- chổ này để hút file js cho từng file php -->
 <script src='./js/trangchu.js'></script>
-    

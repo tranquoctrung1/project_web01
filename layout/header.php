@@ -12,16 +12,16 @@
             <div class="mr-auto"></div>
             <ul class="navbar-nav">
               <li class="nav-item"><a class="nav-link" href="./trangchu.php">Trang Chủ</a></li>
-              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Loại Sản Phẩm</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="#">Áo Khoác</a>
-                  <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Áo</a>
-                  <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Quần</a>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown" href="./loaisanpham.php" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Loại Sản Phẩm</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="./loaisanpham.php?c=3">Áo Khoác</a>
+                  <div class="dropdown-divider"></div><a class="dropdown-item" href="./loaisanpham.php?c=1">Áo</a>
+                  <div class="dropdown-divider"></div><a class="dropdown-item" href="./loaisanpham.php?c=2">Quần</a>
                 </div>
               </li>
-              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nhà Sản Xuất</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="#">Adidas</a>
-                  <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Gucci</a>
-                  <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Việt Nam</a>
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown" href="./hangsanxuat.php" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Nhà Sản Xuất</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="./hangsanxuat.php?p=1">Adidas</a>
+                  <div class="dropdown-divider"></div><a class="dropdown-item" href="./hangsanxuat.php?p=2">Puma</a>
+                  <div class="dropdown-divider"></div><a class="dropdown-item" href="./hangsanxuat.php?p=3">Việt Nam</a>
                 </div>
               </li>
               <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown" href="./timkiemcoban.php" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tìm Kiếm</a>

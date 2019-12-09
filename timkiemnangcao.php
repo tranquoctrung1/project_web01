@@ -17,7 +17,7 @@
       <div class='row xuat-hien'>
         <div class='col'>
           <div class='nhap-tim-kiem-nang-cao'>
-            <form id='formTimKiemNangCao' action='/timkiemnangcao.php' method='GET'>
+            <form id='formTimKiemNangCao' action='javascript:void(0)' method='GET'>
               <div class='form-row'>
                 <div class='form-group col-md-6'>
                   <label for='tenSanPham'>Tên sản phẩm</label>
@@ -35,15 +35,15 @@
                 </div>
                 <div class='form-group col-md-3'>
                   <label for='loaiSanPham'>Giá bắt đầu</label>
-                  <input class='form-control' id='loaiSanPham' type='number' placeholder='100'>
+                  <input class='form-control' id='giaBatDau' type='number' placeholder='100'>
                 </div>
                 <div class='form-group col-md-3'>
                   <label for='loaiSanPham'>Giá kết thúc</label>
-                  <input class='form-control' id='loaiSanPham' type='number' placeholder='100000'>
+                  <input class='form-control' id='giaKetThuc' type='number' placeholder='100000'>
                 </div>
               </div>
               <div class='form-row gui-thong-tin'>
-                <button type='submit'>Tìm Kiếm</button>
+                <button type='submit' id='timKiem'>Tìm Kiếm</button>
               </div>
             </form>
           </div>
@@ -60,67 +60,7 @@
           <h2> <span>Sản Phẩm </span></h2>
         </div>
       </div>
-      <div class='row vi-tri'>
-        <div class='col-lg-4 col-md-6'>
-          <div class='item'>
-            <figure>
-              <div class='img-box'><img src='./images/ao.png' alt='' srcset=''><a href='#'><i class='fas fa-shopping-cart'></i></a><a href='#'><i class='fas fa-eye'></i></a></div>
-              <figcaption>
-                <h4 class='text-center ten-san-pham'>Áo Khoác</h4>
-                <div class='gia-luoc-xem'><span class='gia'>180,000 <sup>đ</sup></span><span class='luoc-xem'>2 lượt xem</span></div>
-                <div class='chi-tiet mt-2'><a href='#'>Chi tiết</a><a href='#'>Thêm giỏ hàng</a></div>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-        <div class='col-lg-4 col-md-6'>
-          <div class='item'>
-            <figure>
-              <div class='img-box'><img src='./images/ao.png' alt='' srcset=''><a href='#'><i class='fas fa-shopping-cart'></i></a><a href='#'><i class='fas fa-eye'></i></a></div>
-              <figcaption>
-                <h4 class='text-center ten-san-pham'>Áo Khoác</h4>
-                <div class='gia-luoc-xem'><span class='gia'>180,000 <sup>đ</sup></span><span class='luoc-xem'>2 lượt xem</span></div>
-                <div class='chi-tiet mt-2'><a href='#'>Chi tiết</a><a href='#'>Thêm giỏ hàng</a></div>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-        <div class='col-lg-4 col-md-6'>
-          <div class='item'>
-            <figure>
-              <div class='img-box'><img src='./images/ao.png' alt='' srcset=''><a href='#'><i class='fas fa-shopping-cart'></i></a><a href='#'><i class='fas fa-eye'></i></a></div>
-              <figcaption>
-                <h4 class='text-center ten-san-pham'>Áo Khoác</h4>
-                <div class='gia-luoc-xem'><span class='gia'>180,000 <sup>đ</sup></span><span class='luoc-xem'>2 lượt xem</span></div>
-                <div class='chi-tiet mt-2'><a href='#'>Chi tiết</a><a href='#'>Thêm giỏ hàng</a></div>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-        <div class='col-lg-4 col-md-6'>
-          <div class='item'>
-            <figure>
-              <div class='img-box'><img src='./images/ao.png' alt='' srcset=''><a href='#'><i class='fas fa-shopping-cart'></i></a><a href='#'><i class='fas fa-eye'></i></a></div>
-              <figcaption>
-                <h4 class='text-center ten-san-pham'>Áo Khoác</h4>
-                <div class='gia-luoc-xem'><span class='gia'>180,000 <sup>đ</sup></span><span class='luoc-xem'>2 lượt xem</span></div>
-                <div class='chi-tiet mt-2'><a href='#'>Chi tiết</a><a href='#'>Thêm giỏ hàng</a></div>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-        <div class='col-lg-4 col-md-6'>
-          <div class='item'>
-            <figure>
-              <div class='img-box'><img src='./images/ao.png' alt='' srcset=''><a href='#'><i class='fas fa-shopping-cart'></i></a><a href='#'><i class='fas fa-eye'></i></a></div>
-              <figcaption>
-                <h4 class='text-center ten-san-pham'>Áo Khoác</h4>
-                <div class='gia-luoc-xem'><span class='gia'>180,000 <sup>đ</sup></span><span class='luoc-xem'>2 lượt xem</span></div>
-                <div class='chi-tiet mt-2'><a href='#'>Chi tiết</a><a href='#'>Thêm giỏ hàng</a></div>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
+      <div class='row vi-tri' id='content'>
       </div>
     </div>
   </section>";

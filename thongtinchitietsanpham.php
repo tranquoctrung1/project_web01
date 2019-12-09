@@ -1,37 +1,64 @@
 <?php   
+
+    include_once('./lib/DataProvider.php');
+
+    if(isset($_GET['id']))
+    {
+      $id = $_GET['id'];
+      $sql = "SELECT s.TenSanPham, s.HinhURL, h.TenHangSanXuat, s.SoLuongXem, s.SoLuongBan, s.GiaSanPham, s.MoTa, l.TenLoaiSanPham FROM SanPham s JOIN HangSanXuat h ON s.MaHangSanXuat = h.MaHangSanXuat JOIN LoaiSanPham l ON l.MaLoaiSanPham = s.MaLoaiSanPham WHERE s.BiXoa = 0 AND s.MaSanPham = $id";
+      $result  = DataProvider::ExecuteQuery($sql);
+
+      $row = mysqli_fetch_array($result);
+
+      $tenSanPham = $row['TenSanPham'];
+      $hinhURL = $row['HinhURL'];
+      $hangSanXuat = $row['TenHangSanXuat'];
+      $soLuotXem = $row['SoLuongXem'];
+      $giaBan = $row['GiaSanPham'];
+      $soLuongBan = $row['SoLuongBan'];
+      $moTa = $row['MoTa'];
+      $tenLoaiSanPham = $row['TenLoaiSanPham'];
+
+      include('./component/SanPhamLienQuan.php');
+    }
+    else
+    {
+      header('Location: ./trangchu.php');
+    }
+
     $tieude = 'Thông Tin Chi Tiết Của Sản Phẩm';
     $class = 'trangthongtin';
     $noidungtrang = 
     "
-    <section class='thong-tin-chi-tiet-san-pham mb-4'>
+    <section class='thong-tin-chi-tiet-san-pham mb-4 mt-3'>
         <div class='hinh-nen-1'></div>
         <div class='hinh-nen-2'></div>
         <div class='container'>
           <div class='row'>
             <div class='col-md-5'>
-              <div class='box-img'> <img src='./images/ao.png' alt='' srcset=''></div>
+              <div class='box-img'> <img src='./images/$hinhURL' alt='' srcset=''></div>
             </div>
             <div class='col-md-7'>
-              <h1 class='ten-san-pham'>Áo Khoác Thời Trang</h1>
-              <p class='nha-san-xuat'>Nhà Sản Xuất: FJK</p>
-              <p class='luot-xem'>100 lượt xem</p>
+              <h1 class='ten-san-pham'>$tenSanPham</h1>
+              <p class='nha-san-xuat'>Nhà Sản Xuất: $hangSanXuat</p>
+              <p class='luot-xem'>Số lượt xem: $soLuotXem</p>
               <hr>
-              <p class='so-luong-ban'>Số lượng bán: 100</p>
-              <p class='gia text-danger'>Giá bán: 50,000 <sup>đ</sup></p>
+              <p class='so-luong-ban'>Số lượng bán: $soLuongBan</p>
+              <p class='gia text-danger'>Giá bán: $giaBan <sup>đ</sup></p>
               <div class='them-vao-gio'>
-                <input id='soLuong' name='soluong' type='number' value='1'><a href='#'><i class='fas fa-shopping-cart'></i>Thêm giỏ hàng</a>
+                <input id='soLuong' name='soluong' type='number' value='1'><a href='./controller/xlChuaDangNhap.php'><i class='fas fa-shopping-cart'></i>Thêm giỏ hàng</a>
               </div>
               <hr>
               <div class='mo-ta'>
                 <h5>Mô Tả</h5>
-                <p>Áo khoác UNISEX với chất liệu vải Kaki jean thô bền bỉ mềm mại. Màu vải được Wash kỹ hạn chế ra màu khi giặt</p>
+                <p>$moTa</p>
               </div>
               <hr>
               <div class='xuat-xu'>
-                <h6>Xuất xứ: Việt Nam</h6>
+                <h6>Xuất xứ: $hangSanXuat</h6>
               </div>
               <div class='the-loai'>
-                <h6>Thể Loại: Áo Khoác</h6>
+                <h6>Loại: $tenLoaiSanPham</h6>
               </div>
             </div>
           </div>
@@ -47,56 +74,7 @@
           <div class='row vi-tri'>
             <div class='col'>
               <div class='owl-carousel owl-theme'>
-                <div class='item'>
-                  <figure>
-                    <div class='img-box'><img src='./images/ao.png' alt='' srcset=''><a href='#'><i class='fas fa-shopping-cart'></i></a><a href='#'><i class='fas fa-eye'></i></a></div>
-                    <figcaption>
-                      <h4 class='text-center ten-san-pham'>Áo Khoác</h4>
-                      <div class='gia-luoc-xem'><span class='gia'>180,000 <sup>đ</sup></span><span class='luoc-xem'>2 lượt xem</span></div>
-                      <div class='chi-tiet mt-2'><a href='#'>Chi tiết</a><a href='#'>Thêm giỏ hàng</a></div>
-                    </figcaption>
-                  </figure>
-                </div>
-                <div class='item'>
-                  <figure>
-                    <div class='img-box'><img src='./images/ao.png' alt='' srcset=''><a href='#'><i class='fas fa-shopping-cart'></i></a><a href='#'><i class='fas fa-eye'></i></a></div>
-                    <figcaption>
-                      <h4 class='text-center ten-san-pham'>Áo Khoác</h4>
-                      <div class='gia-luoc-xem'><span class='gia'>180,000 <sup>đ</sup></span><span class='luoc-xem'>2 lượt xem</span></div>
-                      <div class='chi-tiet mt-2'><a href='#'>Chi tiết</a><a href='#'>Thêm giỏ hàng</a></div>
-                    </figcaption>
-                  </figure>
-                </div>
-                <div class='item'>
-                  <figure>
-                    <div class='img-box'><img src='./images/ao.png' alt='' srcset=''><a href='#'><i class='fas fa-shopping-cart'></i></a><a href='#'><i class='fas fa-eye'></i></a></div>
-                    <figcaption>
-                      <h4 class='text-center ten-san-pham'>Áo Khoác</h4>
-                      <div class='gia-luoc-xem'><span class='gia'>180,000 <sup>đ</sup></span><span class='luoc-xem'>2 lượt xem</span></div>
-                      <div class='chi-tiet mt-2'><a href='#'>Chi tiết</a><a href='#'>Thêm giỏ hàng</a></div>
-                    </figcaption>
-                  </figure>
-                </div>
-                <div class='item'>
-                  <figure>
-                    <div class='img-box'><img src='./images/ao.png' alt='' srcset=''><a href='#'><i class='fas fa-shopping-cart'></i></a><a href='#'><i class='fas fa-eye'></i></a></div>
-                    <figcaption>
-                      <h4 class='text-center ten-san-pham'>Áo Khoác</h4>
-                      <div class='gia-luoc-xem'><span class='gia'>180,000 <sup>đ</sup></span><span class='luoc-xem'>2 lượt xem</span></div>
-                      <div class='chi-tiet mt-2'><a href='#'>Chi tiết</a><a href='#'>Thêm giỏ hàng</a></div>
-                    </figcaption>
-                  </figure>
-                </div>
-                <div class='item'>
-                  <figure>
-                    <div class='img-box'><img src='./images/ao.png' alt='' srcset=''><a href='#'><i class='fas fa-shopping-cart'></i></a><a href='#'><i class='fas fa-eye'></i></a></div>
-                    <figcaption>
-                      <h4 class='text-center ten-san-pham'>Áo Khoác</h4>
-                      <div class='gia-luoc-xem'><span class='gia'>180,000 <sup>đ</sup></span><span class='luoc-xem'>2 lượt xem</span></div>
-                      <div class='chi-tiet mt-2'><a href='#'>Chi tiết</a><a href='#'>Thêm giỏ hàng</a></div>
-                    </figcaption>
-                  </figure>
-                </div>
+                $sanPhamLienQuan
               </div>
             </div>
           </div>
