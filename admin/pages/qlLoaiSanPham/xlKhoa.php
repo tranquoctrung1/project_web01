@@ -5,7 +5,7 @@
     {
         $id = $_GET["id"];
 
-        $sql = "SELECT COUNT(*) FROM LoaiSanPham WHERE MaLoaiSanPham = $id";
+        $sql = "SELECT COUNT(*) FROM SanPham WHERE MaLoaiSanPham = $id";
         $result = DataProvider::ExecuteQuery($sql);
         $row = mysqli_fetch_array($result);
 
@@ -13,7 +13,7 @@
         {
 
             //Xóa dữ liệu rác
-            $sql = "DELETE FROM loaisanpham WHERE MaLoaiSanPham = $id";
+            $sql = "DELETE FROM LoaiSanPham WHERE MaLoaiSanPham = $id";
         }
         else
         {

@@ -37,11 +37,11 @@
                 </div>
                 <div class='form-group col-md-3'>
                   <label for='loaiSanPham'>Giá bắt đầu</label>
-                  <input class='form-control' id='giaBatDau' type='number' placeholder='100'>
+                  <input class='form-control' id='giaBatDau' type='number' placeholder='100' value='1'>
                 </div>
                 <div class='form-group col-md-3'>
                   <label for='loaiSanPham'>Giá kết thúc</label>
-                  <input class='form-control' id='giaKetThuc' type='number' placeholder='100000'>
+                  <input class='form-control' id='giaKetThuc' type='number' value='1000000' placeholder='100000'>
                 </div>
               </div>
               <div class='form-row gui-thong-tin'>

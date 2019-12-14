@@ -80,5 +80,5 @@
         DataProvider::ExecuteQuery($sql);
     }
 
-    DataProvider::ChangeURL('./index.php?c=5');
+    DataProvider::ChangeURL('../../index.php?c=5');
 ?>

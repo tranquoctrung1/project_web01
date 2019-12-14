@@ -8,7 +8,7 @@ if (isset($_GET['q'])) {
     header('Location: ../timkiemcoban.php');
 }
 
-$sql = "SELECT * FROM SanPham WHERE TenSanPham LIKE '%$q%' AND BiXoa = 0";
+$sql = "SELECT s.HinhURL, s.TenSanPham, s.MaSanPham, s.GiaSanPham, s.SoLuongXem FROM SanPham s JOIN LoaiSanPham l ON s.MaLoaiSanPham = l.MaLoaiSanPham JOIN HangSanXuat h ON h.MaHangSanXuat = s.MaHangSanXuat WHERE TenSanPham LIKE '%$q%' AND s.BiXoa = 0 AND h.BiXoa = 0 AND l.BiXoa = 0";
 $result = DataProvider::ExecuteQuery($sql);
 
 $sanPhamTimKiemCoBan = "";

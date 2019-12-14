@@ -6,10 +6,11 @@
     {
       $id = $_GET['id'];
       $sql = "SELECT s.TenSanPham, s.MaSanPham, s.HinhURL, h.TenHangSanXuat, s.SoLuongXem, s.SoLuongBan, s.GiaSanPham, s.MoTa, l.TenLoaiSanPham FROM SanPham s JOIN HangSanXuat h ON s.MaHangSanXuat = h.MaHangSanXuat JOIN LoaiSanPham l ON l.MaLoaiSanPham = s.MaLoaiSanPham WHERE s.BiXoa = 0 AND s.MaSanPham = $id";
+
       $result  = DataProvider::ExecuteQuery($sql);
-
+      
       $row = mysqli_fetch_array($result);
-
+      
       $tenSanPham = $row['TenSanPham'];
       $maSanPham = $row['MaSanPham'];
       $hinhURL = $row['HinhURL'];
@@ -19,7 +20,13 @@
       $soLuongBan = $row['SoLuongBan'];
       $moTa = $row['MoTa'];
       $tenLoaiSanPham = $row['TenLoaiSanPham'];
+      
+      $soLuotXemCu = $row['SoLuongXem'];
+      $soLuotXemMoi =  $soLuotXemCu  + 1;
 
+      $sql = "UPDATE SanPham SET SoLuongXem = $soLuotXemMoi WHERE MaSanPham = $id";
+      DataProvider::ExecuteQuery($sql);
+      
       include('./component/SanPhamLienQuan.php');
     }
     else

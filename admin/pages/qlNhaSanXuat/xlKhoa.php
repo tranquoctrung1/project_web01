@@ -6,7 +6,7 @@
         $id = $_GET["id"];
 
         // Đếm loại sản phẩm
-        $sql = "SELECT COUNT(*) FROM HangSanXuat WHERE MaHangSanXuat = $id";
+        $sql = "SELECT COUNT(*) FROM SanPham WHERE MaHangSanXuat = $id";
         $result = DataProvider::ExecuteQuery($sql);
         $row = mysqli_fetch_array($result);
 

@@ -3,7 +3,6 @@
     // include các component liên quan
     include('./global/global.php');
     include('./component/ThanhHangSanXuat.php');
-    include('./component/NutChonTheoHang.php');
 
     $tieude = 'Hãng Sản Xuất';
     $class = "hangsanxuat";
@@ -27,14 +26,6 @@
     <div class='hinh-nen-1'></div>
     <div class='hinh-nen-2'></div>
     <div class='container'>
-      <div class='col-1 pl-0'>
-        <nav>
-          <ul>
-            <li id='kichHoat'></li>
-            $nutSanPhamTheoHang
-          </ul>
-        </nav>
-      </div>
       <div class='row' id='content'>
       </div>
     </div>

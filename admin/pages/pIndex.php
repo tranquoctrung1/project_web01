@@ -1,10 +1,44 @@
+<?php
+
+    $sql = "SELECT COUNT(*) FROM SanPham";
+    $result = DataProvider::ExecuteQuery($sql);
+    $row = mysqli_fetch_array($result);
+
+    $soLuongSanPham = $row[0];
+
+    $sql = "SELECT COUNT(*) FROM LoaiSanPham";
+    $result = DataProvider::ExecuteQuery($sql);
+    $row = mysqli_fetch_array($result);
+
+    $soLuongLoaiSanPham = $row[0];
+
+    $sql = "SELECT COUNT(*) FROM HangSanXuat";
+    $result = DataProvider::ExecuteQuery($sql);
+    $row = mysqli_fetch_array($result);
+
+    $soLuongHangSanXuat = $row[0];
+
+    $sql = "SELECT COUNT(*) FROM TaiKhoan";
+    $result = DataProvider::ExecuteQuery($sql);
+    $row = mysqli_fetch_array($result);
+
+    $soLuongTaiKhoan = $row[0];
+
+    $sql = "SELECT COUNT(*) FROM DonDatHang";
+    $result = DataProvider::ExecuteQuery($sql);
+    $row = mysqli_fetch_array($result);
+
+    $soLuongDonDatHang = $row[0];
+
+?>
+
 <div class="container index-page">
     <div class="row">
         <div class="col-md-6">
             <div class="card one" id="one">
                 <div class="card-content">
                     <div class="content">
-                        <div class="amount">2000</div>
+                        <div class="amount"><?php echo $soLuongSanPham ?></div>
                         <div class="text">Quản Lý Sản Phẩm</div>
                     </div>
                     <div class="logo"><i class="fab fa-product-hunt"></i></div>
@@ -15,7 +49,7 @@
             <div class="card two" id="two">
                 <div class="card-content">
                     <div class="content">
-                        <div class="amount">2000</div>
+                        <div class="amount"><?php echo $soLuongLoaiSanPham ?></div>
                         <div class="text">Quản Lý Loại Sản Phẩm</div>
                     </div>
                     <div class="logo"><i class="fas fa-copyright"></i></div>
@@ -28,7 +62,7 @@
             <div class="card three" id="three">
                 <div class="card-content">
                     <div class="content">
-                        <div class="amount">2000</div>
+                        <div class="amount"><?php echo $soLuongHangSanXuat ?></div>
                         <div class="text">Quản Lý Nhà Sản Xuất</div>
                     </div>
                     <div class="logo"><i class="fab fa-bandcamp"></i></div>
@@ -41,7 +75,7 @@
             <div class="card four" id="four">
                 <div class="card-content">
                     <div class="content">
-                        <div class="amount">2000</div>
+                        <div class="amount"><?php echo $soLuongTaiKhoan ?></div>
                         <div class="text">Quản Lý Tài Khoản</div>
                     </div>
                     <div class="logo"><i class="fas fa-user-circle"></i></div>
@@ -52,7 +86,7 @@
             <div class="card five" id="five">
                 <div class="card-content">
                     <div class="content">
-                        <div class="amount">2000</div>
+                        <div class="amount"><?php echo $soLuongDonDatHang ?></div>
                         <div class="text">Quản Lý Đơn Đặt Hàng</div>
                     </div>
                     <div class="logo"><i class="fas fa-shopping-cart"></i></div>

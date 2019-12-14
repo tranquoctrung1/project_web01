@@ -1,13 +1,12 @@
 <?php
 
-    // include các component khác vào
-    include('./global/global.php');
-    include('./component/ThanhLoaiSanPham.php');
-    include('./component/NutChonTheoLoai.php');
+// include các component khác vào
+include('./global/global.php');
+include('./component/ThanhLoaiSanPham.php');
 
-    $tieude = 'Loại Sản Phẩm';
-    $class = "product-type";
-    $noidungtrang ="<section class='thanh-loai-san-pham text-center'>
+$tieude = 'Loại Sản Phẩm';
+$class = "product-type";
+$noidungtrang = "<section class='thanh-loai-san-pham text-center'>
     <nav class='navbar navbar-expand-lg navbar-light bg-light'>
       <div class='container'>
         <div class='row'>
@@ -27,20 +26,12 @@
     <div class='hinh-nen-1'></div>
     <div class='hinh-nen-2'></div>
     <div class='container'>
-      <div class='col-1 pl-0'>
-        <nav>
-            <ul>
-                <li id='kichHoat'></li>
-                $nutSanPhamTheoLoai
-            </ul>
-        </nav>
-      </div>
       <div class='row' id='content'>
       </div>
     </div>
   </section>";
 
-    include('./layout/master.php');
+include('./layout/master.php');
 
 ?>
 
