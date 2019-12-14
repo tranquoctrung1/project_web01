@@ -1,0 +1,105 @@
+main {
+    position: relative;
+}
+
+main .left {
+    position: absolute;
+    width: 30%;
+    float: left;
+    transition: .5s all ease-in-out;
+    background: #2d3436;
+    transform: translateX(0);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+@media screen and (max-width: 768px) {
+    main .left {
+        width: 60%;
+    }
+}
+
+main .left.active {
+    transform: translateX(-100%);
+}
+
+main .left .fas.fa-chevron-circle-right {
+    position: absolute;
+    top: 50%;
+    right: -9px;
+    color: white;
+    transition: .5s all ease-in-out;
+    transform: rotate(180deg);
+}
+
+main .left .fas.fa-chevron-circle-right::before {
+    color: black;
+}
+
+main .left .fas.fa-chevron-circle-right.active {
+    transform: rotate(0deg);
+    transition: .5s all ease-in-out;
+}
+
+main .left .list-tag {
+    background: #2d3436;
+    text-align: center;
+    padding: 20px 10px;
+    width: 100%;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    font-size: .8em;
+}
+
+main .left .accordion {
+    background-color: #2d3436;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: .7em;
+    transition: 0.4s;
+}
+
+main .left .accordion:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+main .left .accordion.active {
+    background-color: #636e72;
+}
+
+main .left .accordion.active:after {
+    content: "\2212";
+}
+
+main .left .accordion:hover {
+    background-color: #636e72;
+}
+
+main .left .panel {
+    padding: 0 5px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    background: #2d3436;
+}
+
+main .left .panel a {
+    color: white;
+    transition: .5s all ease-in-out;
+    font-size: .8em;
+}
+
+main .left .panel a:hover {
+    background: #636e72;
+}

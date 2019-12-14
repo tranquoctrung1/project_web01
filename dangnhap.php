@@ -16,6 +16,7 @@
 </head>
 <body class="dangnhapboby">
 <?php
+    include('./global/global.php');
     include('./layout/header.php');
 
     $err = 0;

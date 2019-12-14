@@ -1,0 +1,28 @@
+h2 
+{
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 10px;
+}
+
+.admin-index-page .right .container {
+    padding-top: 10px;
+}
+
+.admin-index-page .right .container .row.chuc-nang .col
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.admin-index-page .right .container .row .col .table .thead-light tr {
+    font-size: .8rem;
+    text-align: center;
+}
+
+.admin-index-page .right .container .row .col .table tbody tr {
+    text-align: center;
+    font-size: .8rem;
+}

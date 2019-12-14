@@ -1,0 +1,114 @@
+.admin-index-page .right {
+    width: 100%;
+    z-index: 1;
+    background: #b2bec3;
+    transition: .5s all ease-in-out;
+<<<<<<< HEAD
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+=======
+>>>>>>> origin/master
+}
+
+.admin-index-page .right.active {
+    background: white;
+}
+
+.admin-index-page .right .container.index-page {
+    padding-top: 20px;
+}
+
+.admin-index-page .right .container.index-page .row .col-12,
+.admin-index-page .right .container.index-page .row .col-md-6 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-index-page .right .container.index-page .row .col-12 .card,
+.admin-index-page .right .container.index-page .row .col-md-6 .card {
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    padding: 20px 20px;
+    width: 80%;
+    height: 80%;
+    border-radius: 7px;
+    outline: none;
+    border: none;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: .5s all ease-in-out;
+}
+
+
+.admin-index-page .right .container.index-page .row .col-12 .card:hover,
+.admin-index-page .right .container.index-page .row .col-md-6 .card:hover 
+{
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.7);
+} 
+
+@media screen and (min-width: 769px) {
+
+    .admin-index-page .right .container.index-page .row .col-12 .card,
+    .admin-index-page .right .container.index-page .row .col-md-6 .card {
+        width: 50%;
+    }
+}
+
+.admin-index-page .right .container.index-page .row .col-12 .card.one,
+.admin-index-page .right .container.index-page .row .col-md-6 .card.one {
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+.admin-index-page .right .container.index-page .row .col-12 .card.two,
+.admin-index-page .right .container.index-page .row .col-md-6 .card.two {
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+}
+
+.admin-index-page .right .container.index-page .row .col-12 .card.three,
+.admin-index-page .right .container.index-page .row .col-md-6 .card.three {
+    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+}
+
+@media screen and (min-width: 769px) {
+
+    .admin-index-page .right .container.index-page .row .col-12 .card.three,
+    .admin-index-page .right .container.index-page .row .col-md-6 .card.three {
+        width: 25%;
+    }
+}
+
+.admin-index-page .right .container.index-page .row .col-12 .card.four,
+.admin-index-page .right .container.index-page .row .col-md-6 .card.four {
+    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+}
+
+.admin-index-page .right .container.index-page .row .col-12 .card.five,
+.admin-index-page .right .container.index-page .row .col-md-6 .card.five {
+    background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%);
+}
+
+.admin-index-page .right .container.index-page .row .col-12 .card .card-content,
+.admin-index-page .right .container.index-page .row .col-md-6 .card .card-content {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.admin-index-page .right .container.index-page .row .col-12 .card .card-content .amount,
+.admin-index-page .right .container.index-page .row .col-md-6 .card .card-content .amount {
+    font-size: 30px;
+}
+
+.admin-index-page .right .container.index-page .row .col-12 .card .card-content .text,
+.admin-index-page .right .container.index-page .row .col-md-6 .card .card-content .text {
+    font-size: 13px;
+}
+
+.admin-index-page .right .container.index-page .row .col-12 .card .logo,
+.admin-index-page .right .container.index-page .row .col-md-6 .card .logo {
+    font-size: 40px;
+}

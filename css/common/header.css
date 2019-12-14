@@ -31,7 +31,7 @@ header .navbar ul.navbar-nav li.nav-item:hover .dropdown-menu {
 
 header .navbar ul.navbar-nav li.nav-item.cart .fa-shopping-cart {
   position: relative; }
-  header .navbar ul.navbar-nav li.nav-item.cart .fa-shopping-cart::after {
+  header .navbar ul.navbar-nav li.nav-item.cart .fa-shopping-cart.kich-hoat::after {
     position: absolute;
     display: block;
     content: '';

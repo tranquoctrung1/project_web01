@@ -31,7 +31,7 @@
     }
 
 
-    $sql = "SELECT s.TenSanPham, s.HinhURL, s.MaSanPham, s.SoLuongXem, s.GiaSanPham FROM SanPham s JOIN HangSanXuat h ON s.MaHangSanXuat = h.MaHangSanXuat JOIN LoaiSanPham l ON l.MaLoaiSanPham = s.MaLoaiSanPham $queryString";
+    $sql = "SELECT s.TenSanPham, s.HinhURL, s.MaSanPham, s.SoLuongXem, s.GiaSanPham FROM SanPham s JOIN HangSanXuat h ON s.MaHangSanXuat = h.MaHangSanXuat JOIN LoaiSanPham l ON l.MaLoaiSanPham = s.MaLoaiSanPham $queryString AND BiXoa = 0 ";
     $result = DataProvider::ExecuteQuery($sql);
 
     $sanPhamTimKiemNangCao ="";
@@ -49,7 +49,7 @@
                 <figure>
                     <div class='img-box'>
                         <img src='./images/$hinhURL' alt='' srcset=''>
-                        <a href='./controller/xlChuaDangNhap.php'>
+                        <a onclick='ThemHang(this)' data-maSanPham='$maSanPham' href='javascript:void(0)'>
                             <i class='fas fa-shopping-cart'></i>
                         </a>
                         <a href='./thongtinchitietsanpham.php?id=$maSanPham'>
@@ -64,7 +64,7 @@
                         <div class='chi-tiet mt-2'>
                             <a href='./thongtinchitietsanpham.php?id=$maSanPham'>Chi tiết
                             </a>
-                            <a href='./controller/xlChuaDangNhap.php'>Thêm giỏ hàng
+                            <a onclick='ThemHang(this)' data-maSanPham='$maSanPham' href='javascript:void(0)'>Thêm giỏ hàng
                             </a>
                         </div>
                     </figcaption>
@@ -73,5 +73,14 @@
         </div>";
     }
 
-    echo $sanPhamTimKiemNangCao;
+    $noiDungTimKiemNangCao = " <div class='row'>
+    <div class='col'>
+      <h2> <span>Sản Phẩm </span></h2>
+    </div>
+  </div>
+  <div class='row vi-tri'>
+    $sanPhamTimKiemNangCao
+  </div>";
+
+    echo $noiDungTimKiemNangCao;
 ?>

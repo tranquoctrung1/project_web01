@@ -4,11 +4,17 @@ include_once('../lib/DataProvider.php');
 
 if (isset($_GET['c'])) {
     $c = $_GET['c'];
-} else {
-    header('Location: ./trangchu.php');
+    $sql = "SELECT * FROM SanPham WHERE MaLoaiSanPham = $c AND BiXoa = 0";
+}
+else 
+{
+    header('Location: ../');
+}
+if($c == 'null') {
+
+    $sql = "SELECT * FROM SanPham";
 }
 
-$sql = "SELECT * FROM SanPham WHERE MaLoaiSanPham = $c";
 $result = DataProvider::ExecuteQuery($sql);
 
 $sanPhamTheoLoai = "";
@@ -26,7 +32,7 @@ while ($row = mysqli_fetch_array($result)) {
                 <figure>
                     <div class='img-box'>
                         <img src='./images/$hinhURL' alt='' srcset=''>
-                        <a href='./controller/xlChuaDangNhap.php'>
+                        <a onclick='ThemHang(this)' data-maSanPham='$maSanPham' href='javascript:void(0)'>
                             <i class='fas fa-shopping-cart'></i>
                         </a>
                         <a href='./thongtinchitietsanpham.php?id=$maSanPham'>
@@ -41,7 +47,7 @@ while ($row = mysqli_fetch_array($result)) {
                         <div class='chi-tiet mt-2'>
                             <a href='./thongtinchitietsanpham.php?id=$maSanPham'>Chi tiết
                             </a>
-                            <a href='./controller/xlChuaDangNhap.php'>Thêm giỏ hàng
+                            <a onclick='ThemHang(this)' data-maSanPham='$maSanPham' href='javascript:void(0)'>Thêm giỏ hàng
                             </a>
                         </div>
                     </figcaption>

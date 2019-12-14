@@ -1,0 +1,8 @@
+/* import các file css của các trang vào */
+@import "./common/header.css";
+@import "./common/footer.css";
+@import "./common/left_sidebar.css";
+
+@import "./page/index.css";
+@import "./page/danhsach.css";
+@import "./page/themsanpham.css";

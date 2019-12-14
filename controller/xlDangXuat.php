@@ -4,6 +4,6 @@
 
     session_destroy();
 
-    header('Location: ../trangchu.php');
+    header('Location: '. $_SERVER['HTTP_REFERER']);
 
 ?>

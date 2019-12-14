@@ -1,16 +1,17 @@
 <?php   
-
+    include('./global/global.php');
     include_once('./lib/DataProvider.php');
 
     if(isset($_GET['id']))
     {
       $id = $_GET['id'];
-      $sql = "SELECT s.TenSanPham, s.HinhURL, h.TenHangSanXuat, s.SoLuongXem, s.SoLuongBan, s.GiaSanPham, s.MoTa, l.TenLoaiSanPham FROM SanPham s JOIN HangSanXuat h ON s.MaHangSanXuat = h.MaHangSanXuat JOIN LoaiSanPham l ON l.MaLoaiSanPham = s.MaLoaiSanPham WHERE s.BiXoa = 0 AND s.MaSanPham = $id";
+      $sql = "SELECT s.TenSanPham, s.MaSanPham, s.HinhURL, h.TenHangSanXuat, s.SoLuongXem, s.SoLuongBan, s.GiaSanPham, s.MoTa, l.TenLoaiSanPham FROM SanPham s JOIN HangSanXuat h ON s.MaHangSanXuat = h.MaHangSanXuat JOIN LoaiSanPham l ON l.MaLoaiSanPham = s.MaLoaiSanPham WHERE s.BiXoa = 0 AND s.MaSanPham = $id";
       $result  = DataProvider::ExecuteQuery($sql);
 
       $row = mysqli_fetch_array($result);
 
       $tenSanPham = $row['TenSanPham'];
+      $maSanPham = $row['MaSanPham'];
       $hinhURL = $row['HinhURL'];
       $hangSanXuat = $row['TenHangSanXuat'];
       $soLuotXem = $row['SoLuongXem'];
@@ -46,7 +47,8 @@
               <p class='so-luong-ban'>Số lượng bán: $soLuongBan</p>
               <p class='gia text-danger'>Giá bán: $giaBan <sup>đ</sup></p>
               <div class='them-vao-gio'>
-                <input id='soLuong' name='soluong' type='number' value='1'><a href='./controller/xlChuaDangNhap.php'><i class='fas fa-shopping-cart'></i>Thêm giỏ hàng</a>
+                <input type='hidden' value='$maSanPham' id='maSanPham'>
+                <input id='soLuong' name='soluong' type='number' value='1'><a id='themGioHang' href='javascript:void(0)'><i class='fas fa-shopping-cart'></i>Thêm giỏ hàng</a>
               </div>
               <hr>
               <div class='mo-ta'>

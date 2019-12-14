@@ -14,6 +14,7 @@
 </head>
 <!-- Traang Header -->
 <?php
+    include('./global/global.php');
     include('./layout/header.php');
 
     // include mã kiểm tra

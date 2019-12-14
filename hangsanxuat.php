@@ -1,6 +1,11 @@
 <?php
 
-    $tieude = 'Hãng Sản Xuât';
+    // include các component liên quan
+    include('./global/global.php');
+    include('./component/ThanhHangSanXuat.php');
+    include('./component/NutChonTheoHang.php');
+
+    $tieude = 'Hãng Sản Xuất';
     $class = "hangsanxuat";
     $noidungtrang ="<section class='thanh-hang-san-xuat text-center'>
     <nav class='navbar navbar-expand-lg navbar-light bg-light'>
@@ -10,9 +15,7 @@
             <button class='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNavDropdown' aria-controls='navbarNavDropdown' aria-expanded='false' aria-label='Toggle navigation'><span class='navbar-toggler-icon'></span></button>
             <div class='collapse navbar-collapse' id='navbarNavDropdown'>
               <ul class='navbar-nav'>
-                <li class='nav-item'><a class='nav-link' href='./hangsanxuat.php?p=1'> <img class='mr-2' src='./images/adidas.png' alt=''>Adidas</a></li>
-                <li class='nav-item'><a class='nav-link' href='./hangsanxuat.php?p=2'> <img class='mr-2' src='./images/puma.png' alt=''>Puma</a></li>
-                <li class='nav-item'><a class='nav-link' href='./hangsanxuat.php?p=3'> <img class='mr-2' src='./images/vietnam.png' alt=''>Việt Nam</a></li>
+                $thanhSanPhamTheoHang
               </ul>
             </div>
           </div>
@@ -28,9 +31,7 @@
         <nav>
           <ul>
             <li id='kichHoat'></li>
-            <li><a href='./hangsanxuat.php?p=1'> <img class='mr-2' src='./images/adidas.png' alt=''>Adidas</a></li>
-            <li><a href='./hangsanxuat.php?p=2'> <img class='mr-2' src='./images/puma.png' alt=''>Puma</a></li>
-            <li><a href='./hangsanxuat.php?p=3'> <img class='mr-2' src='./images/vietnam.png' alt=''>Việt Nam</a></li>
+            $nutSanPhamTheoHang
           </ul>
         </nav>
       </div>

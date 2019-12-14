@@ -66,11 +66,11 @@ const maKiemTraGui = document.getElementById('maKiemTraGui')
 
 
 // định nghĩa các hàm liên quan đến onblur của trang đăng ký
-userdangnhap.addEventListener('blur', KiemTraTenDangNhap); 
-passworddangnhap.addEventListener('blur', KiemTraMatKhau);
-kiemtrapassworddangnhap.addEventListener('blur', KiemTraNhapLaiMatKhau);
-hoten.addEventListener('blur', KiemTraHoTen);
-makiemtra.addEventListener('blur', KiemTraMa);
+// userdangnhap.addEventListener('blur', KiemTraTenDangNhap); 
+// passworddangnhap.addEventListener('blur', KiemTraMatKhau);
+// kiemtrapassworddangnhap.addEventListener('blur', KiemTraNhapLaiMatKhau);
+// hoten.addEventListener('blur', KiemTraHoTen);
+// makiemtra.addEventListener('blur', KiemTraMa);
 
 // định nghĩa các hàm liên quan đến onchange của trang đăng ký
 ngay.addEventListener('change', KiemTraNgay);

@@ -1,4 +1,6 @@
 <?php   
+
+    include('./global/global.php');
     $tieude = 'Tìm Kiếm Cơ Bản';
     $class ="search-basic";
     $noidungtrang = "<section class='thanh-tim-kiem mt-3 mb-4'>
@@ -24,14 +26,8 @@
   <section class='san-pham-tim-kiem'>
         <div class='hinh-nen-1'></div>
         <div class='hinh-nen-2'></div>
-        <div class='container'>
-          <div class='row'>
-            <div class='col'>
-              <h2> <span>Sản Phẩm </span></h2>
-            </div>
-          </div>
-          <div class='row vi-tri' id='content'>
-          </div>
+        <div class='container' id='content'>
+          
         </div>
       </section>";
 

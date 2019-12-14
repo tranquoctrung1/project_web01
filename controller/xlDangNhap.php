@@ -1,7 +1,7 @@
 <?php 
 
     include('../lib/DataProvider.php');
-
+    
     if(isset($_POST['username']) && isset($_POST['password']))
     {
         $TenDangNhap  = $_POST['username'];
@@ -17,7 +17,8 @@
             session_start();
             $_SESSION['MaLoaiTaiKhoan'] = $row['MaLoaiTaiKhoan'];
             $_SESSION['TenHienThi'] = $row['TenHienThi'];
-            header('Location: ../trangchu.php');
+            $_SESSION['MaTaiKhoan'] = $row['MaTaiKhoan'];
+            header('Location: ./GioHang/TaoGioHang.php');
        }
        else
        {
