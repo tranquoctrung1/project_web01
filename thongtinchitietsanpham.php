@@ -57,7 +57,7 @@
               <p class='gia text-danger'>Giá bán: $giaBan <sup>đ</sup></p>
               <div class='them-vao-gio'>
                 <input type='hidden' value='$maSanPham' id='maSanPham'>
-                <input id='soLuong' name='soluong' type='number' value='1'><a id='themGioHang' href='javascript:void(0)'><i class='fas fa-shopping-cart'></i>Thêm giỏ hàng</a>
+                <input id='soLuong' name='soluong' min='1' type='number' value='1'><a id='themGioHang' href='javascript:void(0)'><i class='fas fa-shopping-cart'></i>Thêm giỏ hàng</a>
               </div>
               <hr>
               <div class='mo-ta'>
