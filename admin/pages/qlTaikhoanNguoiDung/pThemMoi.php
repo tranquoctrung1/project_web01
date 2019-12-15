@@ -77,6 +77,8 @@
 
     txtTenDangNhap.addEventListener('blur', KiemTraTenDangNhap)
 
+    var kiemtra = true;
+
     function KiemTraTenDangNhap()
     {
         if(txtTenDangNhap.value == '' || txtTenDangNhap.value == null)
@@ -93,10 +95,10 @@
                     if(this.responseText == '1')
                     {
                         errTenDangNhap.innerHTML = "Tên đăng nhập bị trùng!";
-                        return false;
+                        kiemtra  = false;
                     }
                     else 
-                        return true;
+                        kiemtra  = true;
                 }
                 
             }
@@ -149,16 +151,11 @@
             ten.focus();
             return false;
         }
-        else
+        if(kiemtra == false)
         {
-            if(KiemTraTenDangNhap() == true)
-            {
-                err = "";
-                return false;
-            }
-        }
-            
-
+            return false;
+        }   
+              
         var ten = document.getElementById("pass01");
         var err = document.getElementById("errPSS1");
         if(ten.value == "")

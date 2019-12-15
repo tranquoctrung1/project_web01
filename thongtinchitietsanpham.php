@@ -5,7 +5,7 @@
     if(isset($_GET['id']))
     {
       $id = $_GET['id'];
-      $sql = "SELECT s.TenSanPham, s.MaSanPham, s.HinhURL, h.TenHangSanXuat, s.SoLuongXem, s.SoLuongBan, s.GiaSanPham, s.MoTa, l.TenLoaiSanPham FROM SanPham s JOIN HangSanXuat h ON s.MaHangSanXuat = h.MaHangSanXuat JOIN LoaiSanPham l ON l.MaLoaiSanPham = s.MaLoaiSanPham WHERE s.BiXoa = 0 AND s.MaSanPham = $id";
+      $sql = "SELECT s.TenSanPham, s.MaSanPham, s.HinhURL, h.TenHangSanXuat, s.SoLuongXem, s.SoLuongBan, s.GiaSanPham, s.SoLuongTon,  s.MoTa, l.TenLoaiSanPham FROM SanPham s JOIN HangSanXuat h ON s.MaHangSanXuat = h.MaHangSanXuat JOIN LoaiSanPham l ON l.MaLoaiSanPham = s.MaLoaiSanPham WHERE s.BiXoa = 0 AND s.MaSanPham = $id";
 
       $result  = DataProvider::ExecuteQuery($sql);
       
@@ -17,6 +17,7 @@
       $hangSanXuat = $row['TenHangSanXuat'];
       $soLuotXem = $row['SoLuongXem'];
       $giaBan = $row['GiaSanPham'];
+      $soLuongTon = $row['SoLuongTon'];
       $soLuongBan = $row['SoLuongBan'];
       $moTa = $row['MoTa'];
       $tenLoaiSanPham = $row['TenLoaiSanPham'];
@@ -51,7 +52,8 @@
               <p class='nha-san-xuat'>Nhà Sản Xuất: $hangSanXuat</p>
               <p class='luot-xem'>Số lượt xem: $soLuotXem</p>
               <hr>
-              <p class='so-luong-ban'>Số lượng bán: $soLuongBan</p>
+              <p class='so-luong-ban'>Chỉ còn lại $soLuongTon sản phẩm</p>
+              <p class='so-luong-ban'>Số lượng đã bán: $soLuongBan</p>
               <p class='gia text-danger'>Giá bán: $giaBan <sup>đ</sup></p>
               <div class='them-vao-gio'>
                 <input type='hidden' value='$maSanPham' id='maSanPham'>

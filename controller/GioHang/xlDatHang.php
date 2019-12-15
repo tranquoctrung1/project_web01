@@ -38,12 +38,13 @@
 
             $ngayLap_2 = date('Y-m-d H:i:s');
 
-            $sql = "SELECT GiaSanPham, SoLuongTon FROM SanPham WHERE MaSanPham = $id";
+            $sql = "SELECT GiaSanPham, SoLuongTon, SoLuongBan FROM SanPham WHERE MaSanPham = $id";
             $result = DataProvider::ExecuteQuery($sql);
             $row = mysqli_fetch_array($result);
 
             $soLuongTonHienTai = $row['SoLuongTon'];
             $giaSanPham = $row['GiaSanPham'];
+            $soLuongBanHienTai = $row['SoLuongBan'];
 
             $sql = "SELECT * FROM ChiTietDonDatHang";
             $result = DataProvider::ExecuteQuery($sql);
@@ -54,8 +55,9 @@
             DataProvider::ExecuteQuery($sql);
 
             $soLuongTonMoi = $soLuongTonHienTai - $sl;
+            $soLuongBanMoi = $soLuongBanHienTai + $sl;
 
-            $sql ="UPDATE SanPham SET SoLuongTon = $soLuongTonMoi WHERE MaSanPham = $id";
+            $sql ="UPDATE SanPham SET SoLuongTon = $soLuongTonMoi, SoLuongBan = $soLuongBanMoi WHERE MaSanPham = $id";
             DataProvider::ExecuteQuery($sql);
         }
 

@@ -51,7 +51,7 @@
                 <i id="errTongTien" class="text-danger"></i>
         </div>
         <div class="form-group col">
-            <label for="cmbTinhTrang">Tên đơn hàng</label>
+            <label for="cmbTinhTrang">Tình Trạng:</label>
             <select class="custom-select" name="cmbTinhTrang" id="cmbTinhTrang">
                 <?php 
                     $sql = "SELECT * FROM TinhTrang";
