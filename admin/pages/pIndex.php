@@ -1,30 +1,30 @@
 <?php
 
-    $sql = "SELECT COUNT(*) FROM SanPham";
+    $sql = "SELECT COUNT(*) FROM sanpham";
     $result = DataProvider::ExecuteQuery($sql);
     $row = mysqli_fetch_array($result);
 
     $soLuongSanPham = $row[0];
 
-    $sql = "SELECT COUNT(*) FROM LoaiSanPham";
+    $sql = "SELECT COUNT(*) FROM loaisanpham";
     $result = DataProvider::ExecuteQuery($sql);
     $row = mysqli_fetch_array($result);
 
     $soLuongLoaiSanPham = $row[0];
 
-    $sql = "SELECT COUNT(*) FROM HangSanXuat";
+    $sql = "SELECT COUNT(*) FROM hangsanxuat";
     $result = DataProvider::ExecuteQuery($sql);
     $row = mysqli_fetch_array($result);
 
     $soLuongHangSanXuat = $row[0];
 
-    $sql = "SELECT COUNT(*) FROM TaiKhoan";
+    $sql = "SELECT COUNT(*) FROM taikhoan";
     $result = DataProvider::ExecuteQuery($sql);
     $row = mysqli_fetch_array($result);
 
     $soLuongTaiKhoan = $row[0];
 
-    $sql = "SELECT COUNT(*) FROM DonDatHang";
+    $sql = "SELECT COUNT(*) FROM dondathang";
     $result = DataProvider::ExecuteQuery($sql);
     $row = mysqli_fetch_array($result);
 

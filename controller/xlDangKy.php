@@ -15,7 +15,7 @@
         $NgayThangNamSinh = "$Nam".'-'."$Thang".'-'."$Ngay";
 
         // sau khi form đăng ký chuyển dữ liệu qua chỉ cần thêm vào trong database mà thôi không cần phải check lại lần nữa
-        $sql = "INSERT INTO TaiKhoan(TenDangNhap, MatKhau, TenHienThi, NgaySinh, ThanhPho, BiXoa, MaLoaiTaiKhoan) VALUES ('$TenDangNhap', '$MatKhau', '$HoTen', '$NgayThangNamSinh', '$ThanhPho', 0,1)";
+        $sql = "INSERT INTO taikhoan(TenDangNhap, MatKhau, TenHienThi, NgaySinh, ThanhPho, BiXoa, MaLoaiTaiKhoan) VALUES ('$TenDangNhap', '$MatKhau', '$HoTen', '$NgayThangNamSinh', '$ThanhPho', 0,1)";
 
         DataProvider::ExecuteQuery($sql);
 

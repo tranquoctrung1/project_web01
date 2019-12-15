@@ -34,7 +34,7 @@
                 </thead>
                 <tbody>
                     <?php
-                    $sql = "SELECT * FROM HangSanXuat WHERE TenHangSanXuat = '$txtTenNhaSanXuat'";
+                    $sql = "SELECT * FROM hangsanxuat WHERE TenHangSanXuat = '$txtTenNhaSanXuat'";
                     $result = DataProvider::ExecuteQuery($sql);
                     $stt = 1;
                     while ($row = mysqli_fetch_array($result)) {

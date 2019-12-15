@@ -29,7 +29,7 @@ $row = mysqli_fetch_array($result);
             <label for="cmbLoai">Loại sản phẩm</label>
             <select class="form-control" id="cmbLoai" name="cmbLoai">
                 <?php
-                $sql = "SELECT * FROM LoaiSanPham WHERE BiXoa = 0";
+                $sql = "SELECT * FROM loaisanpham WHERE BiXoa = 0";
                 $result = DataProvider::ExecuteQuery($sql);
                 while ($row1 = mysqli_fetch_array($result)) {
                     ?>
@@ -53,7 +53,7 @@ $row = mysqli_fetch_array($result);
             <select class="form-control" id="cmbHang" name="cmbHang">
                 <?php
 
-                $sql = "SELECT * FROM HangSanXuat WHERE BiXoa = 0";
+                $sql = "SELECT * FROM hangsanxuat WHERE BiXoa = 0";
                 $result = DataProvider::ExecuteQuery($sql);
                 while ($row1 = mysqli_fetch_array($result)) {
                     ?>

@@ -5,7 +5,7 @@
         $maDonDatHang = $_GET['id'];
     }
 
-    $sql_t = "SELECT * FROM DonDatHang WHERE MaDonDatHang = '$maDonDatHang'";
+    $sql_t = "SELECT * FROM dondathang WHERE MaDonDatHang = '$maDonDatHang'";
     $result_t  = DataProvider::ExecuteQuery($sql_t);
     $row_t = mysqli_fetch_array($result_t);
 ?>
@@ -24,7 +24,7 @@
             <label for="cmbMaKhachHang">Tên khách hàng</label>
             <select class="custom-select" name="cmbMaKhachHang" id="maKhachHang">
                 <?php 
-                    $sql = "SELECT * FROM TaiKhoan";
+                    $sql = "SELECT * FROM taikhoan";
                     $result = DataProvider::ExecuteQuery($sql);
                     
                     while($row = mysqli_fetch_array($result))
@@ -54,7 +54,7 @@
             <label for="cmbTinhTrang">Tình Trạng:</label>
             <select class="custom-select" name="cmbTinhTrang" id="cmbTinhTrang">
                 <?php 
-                    $sql = "SELECT * FROM TinhTrang";
+                    $sql = "SELECT * FROM tinhtrang";
                     $result = DataProvider::ExecuteQuery($sql);
                     
                     while($row = mysqli_fetch_array($result))

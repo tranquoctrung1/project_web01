@@ -11,8 +11,8 @@ if(isset($_SESSION['SoLuongTrongGioHang']) && $_SESSION['SoLuongTrongGioHang'] >
   $classKichhoatGioHang = "kich-hoat";
 }
 
-$sql = "SELECT * FROM LoaiSanPham WHERE BiXoa = 0 ";
-$sql_2 = "SELECT * FROM HangSanXuat WHERE BiXoa = 0";
+$sql = "SELECT * FROM loaisanpham WHERE BiXoa = 0 ";
+$sql_2 = "SELECT * FROM hangsanxuat WHERE BiXoa = 0";
 
 $result = DataProvider::ExecuteQuery($sql);
 $result_2 = DataProvider::ExecuteQuery($sql_2);

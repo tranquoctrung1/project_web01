@@ -16,7 +16,7 @@
         $id = $gioHang->listProduct[$i]->id;
         $num = $gioHang->listProduct[$i]->num;
 
-        $sql = "SELECT TenSanPham, GiaSanPham, HinhURL FROM SanPham WHERE BiXoa = 0 AND MaSanPham = $id";
+        $sql = "SELECT TenSanPham, GiaSanPham, HinhURL FROM sanpham WHERE BiXoa = 0 AND MaSanPham = $id";
         $result = DataProvider::ExecuteQuery($sql);
 
         while($row = mysqli_fetch_array($result))

@@ -9,7 +9,7 @@
         $TenDangNhap = $_POST['TenDangNhap'];
     }
 
-    $sql = "SELECT * FROM TaiKhoan WHERE TenDangNhap = '$TenDangNhap'";
+    $sql = "SELECT * FROM taikhoan WHERE TenDangNhap = '$TenDangNhap'";
     $result = DataProvider::ExecuteQuery($sql);
 
     $row = mysqli_fetch_array($result);

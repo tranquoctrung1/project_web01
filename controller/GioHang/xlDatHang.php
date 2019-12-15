@@ -26,7 +26,7 @@
         $maDonDatHang = "DH".date('d').date('m').date('Y').date('H').date('i').date('s').substr(date('s'),2);
 
 
-        $sql = "INSERT INTO DonDatHang(MaDonDatHang, NgayLap, TongTien, MaTaiKhoan, MaTinhTrang) VALUES ('$maDonDatHang', '$ngayLap', $tongTien, $maTaiKhoan, $maTinhTrang)";
+        $sql = "INSERT INTO dondathang(MaDonDatHang, NgayLap, TongTien, MaTaiKhoan, MaTinhTrang) VALUES ('$maDonDatHang', '$ngayLap', $tongTien, $maTaiKhoan, $maTinhTrang)";
         $result =  DataProvider::ExecuteQuery($sql);
     
         $soLuongSanPham = count($gioHang->listProduct);
@@ -38,7 +38,7 @@
 
             $ngayLap_2 = date('Y-m-d H:i:s');
 
-            $sql = "SELECT GiaSanPham, SoLuongTon, SoLuongBan FROM SanPham WHERE MaSanPham = $id";
+            $sql = "SELECT GiaSanPham, SoLuongTon, SoLuongBan FROM sanpham WHERE MaSanPham = $id";
             $result = DataProvider::ExecuteQuery($sql);
             $row = mysqli_fetch_array($result);
 
@@ -46,18 +46,18 @@
             $giaSanPham = $row['GiaSanPham'];
             $soLuongBanHienTai = $row['SoLuongBan'];
 
-            $sql = "SELECT * FROM ChiTietDonDatHang";
+            $sql = "SELECT * FROM chitietdondathang";
             $result = DataProvider::ExecuteQuery($sql);
 
             $maChiTietDonDatHang = "CTDDH".date('d').date('m').date('Y').date('H').date('i').date('s').substr(date('s'),2).$i;
 
-            $sql =  "INSERT INTO ChiTietDonDatHang VALUES ('$maChiTietDonDatHang', $sl, $giaSanPham, '$maDonDatHang', $id)";
+            $sql =  "INSERT INTO chitietdondathang VALUES ('$maChiTietDonDatHang', $sl, $giaSanPham, '$maDonDatHang', $id)";
             DataProvider::ExecuteQuery($sql);
 
             $soLuongTonMoi = $soLuongTonHienTai - $sl;
             $soLuongBanMoi = $soLuongBanHienTai + $sl;
 
-            $sql ="UPDATE SanPham SET SoLuongTon = $soLuongTonMoi, SoLuongBan = $soLuongBanMoi WHERE MaSanPham = $id";
+            $sql ="UPDATE sanpham SET SoLuongTon = $soLuongTonMoi, SoLuongBan = $soLuongBanMoi WHERE MaSanPham = $id";
             DataProvider::ExecuteQuery($sql);
         }
 

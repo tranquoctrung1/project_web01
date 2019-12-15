@@ -13,13 +13,13 @@
             if($idTinhTrang == 1)
             {
                 echo 11111;
-                $sql = "UPDATE DonDatHang SET MaTinhTrang = 2 WHERE MaDonDatHang = '$id'";
+                $sql = "UPDATE dondathang SET MaTinhTrang = 2 WHERE MaDonDatHang = '$id'";
             }
             // từ bom hàng sang đặt lại
             else 
             {
                 echo 222222;
-                $sql = "UPDATE DonDatHang SET MaTinhTrang = 1 WHERE MaDonDatHang = '$id'";
+                $sql = "UPDATE dondathang SET MaTinhTrang = 1 WHERE MaDonDatHang = '$id'";
             }
             DataProvider::ExecuteQuery($sql);
         }

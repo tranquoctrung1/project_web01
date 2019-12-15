@@ -29,11 +29,11 @@
                 move_uploaded_file($file_tmp,"../../../images/".$file_name);
             }
 
-            $sql = "UPDATE HangSanXuat SET TenHangSanXuat = '$ten', LogoURL = '$logo' WHERE MaHangSanXuat = $id";    
+            $sql = "UPDATE hangsanxuat SET TenHangSanXuat = '$ten', LogoURL = '$logo' WHERE MaHangSanXuat = $id";    
         }
         else 
         {
-            $sql = "UPDATE HangSanXuat SET TenHangSanXuat = '$ten' WHERE MaHangSanXuat = $id";
+            $sql = "UPDATE hangsanxuat SET TenHangSanXuat = '$ten' WHERE MaHangSanXuat = $id";
         }
 
         DataProvider::ExecuteQuery($sql);

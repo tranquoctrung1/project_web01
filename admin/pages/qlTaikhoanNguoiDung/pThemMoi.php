@@ -38,7 +38,7 @@
             <select class="form-control" id="cmbLoaiTaiKhoan" name="cmbLoaiTaiKhoan">
                 <?php
 
-                $sql = "SELECT * FROM LoaiTaiKhoan";
+                $sql = "SELECT * FROM loaitaikhoan";
                 $result = DataProvider::ExecuteQuery($sql);
                 
                 while ($row = mysqli_fetch_array($result)) {

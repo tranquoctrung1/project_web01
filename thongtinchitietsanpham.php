@@ -5,7 +5,7 @@
     if(isset($_GET['id']))
     {
       $id = $_GET['id'];
-      $sql = "SELECT s.TenSanPham, s.MaSanPham, s.HinhURL, h.TenHangSanXuat, s.SoLuongXem, s.SoLuongBan, s.GiaSanPham, s.SoLuongTon,  s.MoTa, l.TenLoaiSanPham FROM SanPham s JOIN HangSanXuat h ON s.MaHangSanXuat = h.MaHangSanXuat JOIN LoaiSanPham l ON l.MaLoaiSanPham = s.MaLoaiSanPham WHERE s.BiXoa = 0 AND s.MaSanPham = $id";
+      $sql = "SELECT s.TenSanPham, s.MaSanPham, s.HinhURL, h.TenHangSanXuat, s.SoLuongXem, s.SoLuongBan, s.GiaSanPham, s.SoLuongTon,  s.MoTa, l.TenLoaiSanPham FROM sanpham s JOIN hangsanxuat h ON s.MaHangSanXuat = h.MaHangSanXuat JOIN loaisanpham l ON l.MaLoaiSanPham = s.MaLoaiSanPham WHERE s.BiXoa = 0 AND s.MaSanPham = $id";
 
       $result  = DataProvider::ExecuteQuery($sql);
       
@@ -25,7 +25,7 @@
       $soLuotXemCu = $row['SoLuongXem'];
       $soLuotXemMoi =  $soLuotXemCu  + 1;
 
-      $sql = "UPDATE SanPham SET SoLuongXem = $soLuotXemMoi WHERE MaSanPham = $id";
+      $sql = "UPDATE sanpham SET SoLuongXem = $soLuotXemMoi WHERE MaSanPham = $id";
       DataProvider::ExecuteQuery($sql);
       
       include('./component/SanPhamLienQuan.php');

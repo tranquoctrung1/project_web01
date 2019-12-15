@@ -1,7 +1,7 @@
 <?php
 include_once('./lib/DataProvider.php');
 
-$sql = "SELECT * FROM SanPham WHERE BiXoa = 0 ORDER BY NgayNhap DESC LIMIT 0, 10";
+$sql = "SELECT * FROM sanpham WHERE BiXoa = 0 ORDER BY NgayNhap DESC LIMIT 0, 10";
 $result = DataProvider::ExecuteQuery($sql);
 
 $sanPhamMoiNhat = "";

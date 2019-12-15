@@ -5,7 +5,7 @@
     {
         $id = $_GET["id"];
 
-        $sql = "UPDATE TaiKhoan SET BiXoa = 1 - BiXoa WHERE MaTaiKhoan = $id";
+        $sql = "UPDATE taikhoan SET BiXoa = 1 - BiXoa WHERE MaTaiKhoan = $id";
         DataProvider::ExecuteQuery($sql);
     }
 

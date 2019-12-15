@@ -7,7 +7,7 @@
             <label for="cmbMaSanPham">Tên sản phẩm</label>
             <select class="custom-select" name="cmbMaSanPham" id="cmbMaSanPham">
                 <?php 
-                    $sql = "SELECT * FROM SanPham";
+                    $sql = "SELECT * FROM sanpham";
                     $result = DataProvider::ExecuteQuery($sql);
                     
                     while($row = mysqli_fetch_array($result))
@@ -28,7 +28,7 @@
             <label for="cmbMaDonDatHang">Tên đơn hàng</label>
             <select class="custom-select" name="cmbMaDonDatHang" id="cmbMaDonDatHang">
                 <?php 
-                    $sql = "SELECT * FROM DonDatHang";
+                    $sql = "SELECT * FROM dondathang";
                     $result = DataProvider::ExecuteQuery($sql);
                     
                     while($row = mysqli_fetch_array($result))
@@ -46,7 +46,7 @@
             <label for="cmbMaKhachHang">Tên khách hàng</label>
             <select class="custom-select" name="cmbMaKhachHang" id="maKhachHang">
                 <?php 
-                    $sql = "SELECT * FROM TaiKhoan";
+                    $sql = "SELECT * FROM taikhoan";
                     $result = DataProvider::ExecuteQuery($sql);
                     
                     while($row = mysqli_fetch_array($result))

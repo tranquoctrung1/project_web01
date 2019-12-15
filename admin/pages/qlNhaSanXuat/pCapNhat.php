@@ -3,7 +3,7 @@
         DataProvider::ChangeURL("index.php?c=404");
 
     $id = $_GET["id"];
-    $sql = "SELECT * FROM HangSanXuat WHERE MaHangSanXuat = $id";
+    $sql = "SELECT * FROM hangsanxuat WHERE MaHangSanXuat = $id";
     $result = DataProvider::ExecuteQuery($sql);
     $row = mysqli_fetch_array($result);
 ?>

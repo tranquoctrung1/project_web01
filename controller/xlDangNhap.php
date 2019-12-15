@@ -7,7 +7,7 @@
         $TenDangNhap  = $_POST['username'];
         $MatKhau = $_POST['password'];
 
-        $sql = "SELECT * FROM TaiKhoan WHERE TenDangNhap = '$TenDangNhap' AND MatKhau = '$MatKhau' AND BiXoa = 0";
+        $sql = "SELECT * FROM taikhoan WHERE TenDangNhap = '$TenDangNhap' AND MatKhau = '$MatKhau' AND BiXoa = 0";
 
        $result =  DataProvider::ExecuteQuery($sql);
        $row = mysqli_fetch_array($result);

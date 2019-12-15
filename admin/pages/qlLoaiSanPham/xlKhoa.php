@@ -5,7 +5,7 @@
     {
         $id = $_GET["id"];
 
-        $sql = "SELECT COUNT(*) FROM SanPham WHERE MaLoaiSanPham = $id";
+        $sql = "SELECT COUNT(*) FROM sanpham WHERE MaLoaiSanPham = $id";
         $result = DataProvider::ExecuteQuery($sql);
         $row = mysqli_fetch_array($result);
 
@@ -13,12 +13,12 @@
         {
 
             //Xóa dữ liệu rác
-            $sql = "DELETE FROM LoaiSanPham WHERE MaLoaiSanPham = $id";
+            $sql = "DELETE FROM loaisanpham WHERE MaLoaiSanPham = $id";
         }
         else
         {
             // cập nhật khóa hay là không khóa
-            $sql = "UPDATE LoaiSanPham SET BiXoa = 1 - BiXoa WHERE MaloaiSanPham = $id";
+            $sql = "UPDATE loaisanpham SET BiXoa = 1 - BiXoa WHERE MaloaiSanPham = $id";
         }
 
         DataProvider::ExecuteQuery($sql);

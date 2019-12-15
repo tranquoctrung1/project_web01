@@ -11,7 +11,7 @@
         $matKhauMoi = $_POST['newPass'];
         $MaLoaiTaiKhoan = $_POST["cmbLoaiTaiKhoan"];
 
-        $sql = "UPDATE TaiKhoan SET  TenDangNhap = '$tenDangNhap', NgaySinh = '$ngaySinh', ThanhPho = '$noiSong', TenHienThi = '$hoTen', MatKhau = '$matKhauMoi', MaLoaiTaiKhoan = $MaLoaiTaiKhoan WHERE MaTaiKhoan = $id";
+        $sql = "UPDATE taikhoan SET  TenDangNhap = '$tenDangNhap', NgaySinh = '$ngaySinh', ThanhPho = '$noiSong', TenHienThi = '$hoTen', MatKhau = '$matKhauMoi', MaLoaiTaiKhoan = $MaLoaiTaiKhoan WHERE MaTaiKhoan = $id";
 
         DataProvider::ExecuteQuery($sql);
     }

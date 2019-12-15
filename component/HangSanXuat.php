@@ -4,14 +4,14 @@ include_once('../lib/DataProvider.php');
 
 if (isset($_GET['p'])) {
     $p = $_GET['p'];
-    $sql = "SELECT * FROM SanPham WHERE MaHangSanXuat = $p AND BiXoa = 0";
+    $sql = "SELECT * FROM sanpham WHERE MaHangSanXuat = $p AND BiXoa = 0";
 } 
 else {
     header('Location: ../');
 }
 if($p == 'null')
 {
-    $sql = "SELECT * FROM SanPham";
+    $sql = "SELECT * FROM sanpham";
 }
 
 $result = DataProvider::ExecuteQuery($sql);

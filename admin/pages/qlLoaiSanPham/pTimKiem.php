@@ -37,7 +37,7 @@
                 <tbody>
                     <?php
                         $stt = 1;
-                        $sql = "SELECT * FROM LoaiSanPham WHERE TenLoaiSanPham LIKE '%$txtTenLoaiSanPham%'";
+                        $sql = "SELECT * FROM loaisanpham WHERE TenLoaiSanPham LIKE '%$txtTenLoaiSanPham%'";
                         $result = DataProvider::ExecuteQuery($sql);
                         while ($row = mysqli_fetch_array($result))
                         {

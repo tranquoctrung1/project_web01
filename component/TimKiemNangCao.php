@@ -31,7 +31,7 @@
     }
 
 
-    $sql = "SELECT s.HinhURL, s.TenSanPham, s.MaSanPham, s.GiaSanPham, s.SoLuongXem FROM SanPham s JOIN LoaiSanPham l ON s.MaLoaiSanPham = l.MaLoaiSanPham JOIN HangSanXuat h ON h.MaHangSanXuat = s.MaHangSanXuat $queryString AND s.BiXoa = 0 AND h.BiXoa = 0 AND l.BiXoa = 0";
+    $sql = "SELECT s.HinhURL, s.TenSanPham, s.MaSanPham, s.GiaSanPham, s.SoLuongXem FROM sanpham s JOIN loaisanpham l ON s.MaLoaiSanPham = l.MaLoaiSanPham JOIN hangsanxuat h ON h.MaHangSanXuat = s.MaHangSanXuat $queryString AND s.BiXoa = 0 AND h.BiXoa = 0 AND l.BiXoa = 0";
     $result = DataProvider::ExecuteQuery($sql);
 
     $sanPhamTimKiemNangCao ="";

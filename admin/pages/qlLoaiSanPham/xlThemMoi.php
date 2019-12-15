@@ -27,7 +27,7 @@
         }
 
          // lấy mã lớn nhất của mã loại sản phẩm sau đó tăng lên 1
-         $sql = "SELECT MaLoaiSanPham FROM LoaiSanPham";
+         $sql = "SELECT MaLoaiSanPham FROM loaisanpham";
          $result = DataProvider::ExecuteQuery($sql);
  
          $maLoaiSanPham = 0;

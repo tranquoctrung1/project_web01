@@ -4,7 +4,7 @@
     {
         $id = $_GET['id'];
 
-        $sql = "SELECT * FROM TaiKhoan WHERE MaTaiKhoan = $id";
+        $sql = "SELECT * FROM taikhoan WHERE MaTaiKhoan = $id";
         $result = DataProvider::ExecuteQuery($sql);
         $row = mysqli_fetch_array($result);
     }
@@ -53,7 +53,7 @@
             <select class="form-control" id="cmbLoaiTaiKhoan" name="cmbLoaiTaiKhoan">
                 <?php
 
-                $sql = "SELECT * FROM LoaiTaiKhoan";
+                $sql = "SELECT * FROM loaitaikhoan";
                 $result = DataProvider::ExecuteQuery($sql);
                 
                 while ($row = mysqli_fetch_array($result)) {

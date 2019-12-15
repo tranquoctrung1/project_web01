@@ -4,7 +4,7 @@ include_once('../lib/DataProvider.php');
 
 if (isset($_GET['c'])) {
     $c = $_GET['c'];
-    $sql = "SELECT * FROM SanPham WHERE MaLoaiSanPham = $c AND BiXoa = 0";
+    $sql = "SELECT * FROM sanpham WHERE MaLoaiSanPham = $c AND BiXoa = 0";
 }
 else 
 {
@@ -12,7 +12,7 @@ else
 }
 if($c == 'null') {
 
-    $sql = "SELECT * FROM SanPham";
+    $sql = "SELECT * FROM sanpham";
 }
 
 $result = DataProvider::ExecuteQuery($sql);

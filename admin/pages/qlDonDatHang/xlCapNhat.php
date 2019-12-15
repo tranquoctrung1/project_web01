@@ -12,7 +12,7 @@
 
         $dateNgayLap = $dateNgayLap.date(' H:s:i');
 
-        $sql = "UPDATE DonDatHang SET NgayLap = '$dateNgayLap' ,MaTaiKhoan = $cmbMaKhachHang, TongTien = $txtTongTien, MaTinhTrang = $cmbTinhTrang WHERE MaDonDatHang = '$id'";
+        $sql = "UPDATE dondathang SET NgayLap = '$dateNgayLap' ,MaTaiKhoan = $cmbMaKhachHang, TongTien = $txtTongTien, MaTinhTrang = $cmbTinhTrang WHERE MaDonDatHang = '$id'";
         DataProvider::ExecuteQuery($sql);
     }
 

@@ -32,7 +32,7 @@
                 </thead>
                 <tbody>
                     <?php
-                    $sql = "SELECT * FROM HangSanXuat";
+                    $sql = "SELECT * FROM hangsanxuat";
                     $result = DataProvider::ExecuteQuery($sql);
                     $stt = 1;
                     while ($row = mysqli_fetch_array($result)) {

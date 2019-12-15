@@ -5,19 +5,19 @@
     {
         $id  = $_GET['id'];
 
-        $sql = "SELECT COUNT(*) FROM SanPham WHERE MaSanPham = $id";
+        $sql = "SELECT COUNT(*) FROM sanpham WHERE MaSanPham = $id";
         $result = DataProvider::ExecuteQuery($sql);
         $row = mysqli_fetch_array($result);
         
         if($row[0] == 0)
         {
             // xóa dữ liệu rác
-            $sql = "DELETE FROM SanPham WHERE MaSanPham = $id";
+            $sql = "DELETE FROM sanpham WHERE MaSanPham = $id";
         }
         else
         {
             // Cập nhật bị xóa lên thành 1 hay là xuống 0 theo bị xóa của sản phẩm
-            $sql = "UPDATE SanPham SET BiXoa = 1  - BiXoa WHERE MaSanPham= $id";
+            $sql = "UPDATE sanpham SET BiXoa = 1  - BiXoa WHERE MaSanPham= $id";
         }
         DataProvider::ExecuteQuery($sql);
     }

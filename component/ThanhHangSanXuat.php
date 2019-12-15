@@ -2,7 +2,7 @@
 
     include_once('./lib/DataProvider.php');
 
-    $sql_1 = "SELECT * FROM HangSanXuat WHERE BiXoa = 0";
+    $sql_1 = "SELECT * FROM hangsanxuat WHERE BiXoa = 0";
     $result_1 = DataProvider::ExecuteQuery($sql_1);
 
     $thanhSanPhamTheoHang = "";

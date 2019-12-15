@@ -2,11 +2,11 @@
 include_once('./lib/DataProvider.php');
 
 // Lấy theo loại sản phẩm
-$sql_1 = "SELECT MaLoaiSanPham FROM SanPham WHERE MaSanPham = $id";
+$sql_1 = "SELECT MaLoaiSanPham FROM sanpham WHERE MaSanPham = $id";
 $result_1 = DataProvider::ExecuteQuery($sql_1);
 $maLoaiSanPham =  mysqli_fetch_array($result_1)['MaLoaiSanPham'];
 
-$sql_1 = "SELECT * FROM SanPham WHERE BiXoa = 0 AND MaLoaiSanPham = $maLoaiSanPham  AND MaSanPham != $id LIMIT 0,5 ";
+$sql_1 = "SELECT * FROM sanpham WHERE BiXoa = 0 AND MaLoaiSanPham = $maLoaiSanPham  AND MaSanPham != $id LIMIT 0,5 ";
 $result_1 =  DataProvider::ExecuteQuery($sql_1);
 
 $sanPhamLienQuan = "";

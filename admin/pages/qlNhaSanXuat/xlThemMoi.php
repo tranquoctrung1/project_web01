@@ -30,7 +30,7 @@
         }
 
         // lấy mã lớn nhất của mã hãng sản xuất sau đó tăng lên 1
-        $sql = "SELECT MaHangSanXuat FROM HangSanXuat";
+        $sql = "SELECT MaHangSanXuat FROM hangsanxuat";
         $result = DataProvider::ExecuteQuery($sql);
 
         $maHangSanXuat = 0;
@@ -42,7 +42,7 @@
         $maHangSanXuat += 1;
 
         // chèn vào trong database
-        $sql = "INSERT INTO HangSanXuat(MaHangSanXuat, TenHangSanXuat, LogoURL, BiXoa) VALUES($maHangSanXuat, '$ten', '$tenLogo', 0)";
+        $sql = "INSERT INTO hangsanxuat(MaHangSanXuat, TenHangSanXuat, LogoURL, BiXoa) VALUES($maHangSanXuat, '$ten', '$tenLogo', 0)";
         DataProvider::ExecuteQuery($sql);
     }
 
